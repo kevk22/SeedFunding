@@ -28,5 +28,6 @@ class ApplicationController < ActionController::Base
   def require_signed_in!
      unless current_user
       render json: { base: ['invalid email / password'] }, status: 401
+     end
   end
 end
