@@ -13,12 +13,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
-        <div>
-            <header>
+        <header>
+            <Link to="/" className="header-link">
                 <h1>SeedCapital</h1>
-                <GreetingContainer />
-            </header>
-        </div>
+            </Link>
+            <GreetingContainer />
+        </header>
     </div>
 );
 
