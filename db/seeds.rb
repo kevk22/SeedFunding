@@ -16,3 +16,4 @@ user5 = User.create!(name: 'Jason', email: 'jason5@aa.io', password: 'password')
 user6 = User.create!(name: 'Marc', email: 'marc6@aa.io', password: 'password')
 user7 = User.create!(name: 'Spencer', email: 'spencer7@aa.io', password: 'password')
 user8 = User.create!(name: 'Jesus', email: 'jesus8@aa.io', password: 'password')
+
