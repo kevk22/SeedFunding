@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SessionFormLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,13 +45,6 @@ class SessionForm extends React.Component {
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-            <label>Name:
-              <input type="text"
-                value={this.state.name}
-                onChange={this.update('name')}
-                className="login-input"
-              />
-            </label>
             <br/>
             <label>Email:
               <input type="text"
@@ -77,4 +70,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SessionFormLogin);

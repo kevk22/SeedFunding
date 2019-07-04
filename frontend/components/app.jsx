@@ -17,9 +17,9 @@ const App = () => (
     <div>
         <header>
             <Link to="/" className="header-link">
-                <h1>SeedCapital</h1>
+                <img src="logo.png" id="logo" />
             </Link>
-            <GreetingContainer />
+            <GreetingContainer  />
         </header>
 
         <AuthRoute exact path="/login" component={LogInFormContainer} />
