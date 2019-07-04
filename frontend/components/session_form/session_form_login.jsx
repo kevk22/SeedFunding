@@ -10,6 +10,7 @@ class SessionFormLogin extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestSubmit = this.handleGuestSubmit.bind(this)
   }
 
   update(field) {
@@ -36,13 +37,18 @@ class SessionFormLogin extends React.Component {
     );
   }
 
+  handleGuestSubmit(e) {
+    e.preventDefault();
+    this.props.demoUser({email: 'demo', password: 'password'})
+      .then(() => this.props.history.push("/"));
+  }
+
   render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to SeedFunding
+          Log in
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -63,6 +69,9 @@ class SessionFormLogin extends React.Component {
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <button onClick={this.handleGuestSubmit}>Login as demo user</button>
+            <br/>
+            New to SeedFunding? {this.props.navLink}
           </div>
         </form>
       </div>

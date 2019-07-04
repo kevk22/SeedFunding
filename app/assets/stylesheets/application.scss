@@ -16,16 +16,24 @@
 
  
 header {
-    /* display: flow-root; */
+    .login-signup {
+        float: right;
+        color: #282828;
+        cursor: pointer;
+        font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding-right: 2.4rem;
+        padding-bottom: 2.4rem;
+    }
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:180px;
+        height:20px;
+        padding-top: 1.2rem;
+    }  
 } 
 
 
-#logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:180px;
-  height:20px;
- }
 
- 
+

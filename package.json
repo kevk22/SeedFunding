@@ -5,6 +5,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.0",
     "babel-loader": "^8.0.6",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
@@ -44,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/kevk22/SeedFunding/issues"
   },
-  "homepage": "https://github.com/kevk22/SeedFunding#readme"
+  "homepage": "https://github.com/kevk22/SeedFunding#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.0"
+  }
 }
