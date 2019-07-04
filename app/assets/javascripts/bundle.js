@@ -228,6 +228,7 @@ var Greeting = function Greeting(_ref) {
     }, "Log Out"));
   };
 
+  debugger;
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
@@ -254,6 +255,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(_ref) {
   var session = _ref.session,
       users = _ref.entities.users;
+  debugger;
   return {
     currentUser: users[session.id]
   };
@@ -419,7 +421,9 @@ var sessionReducer = function sessionReducer() {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      return action.currentUser.id;
+      return {
+        id: action.currentUser.id
+      };
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["LOGOUT_CURRENT_USER"]:
       return _nullUser;
