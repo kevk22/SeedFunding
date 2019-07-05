@@ -10,7 +10,7 @@ class Api::SessionsController < ApplicationController
       sign_in(@user)
       render "api/users/show"
     else
-      render json: ['The email address and password you entered do not match.']
+      render json: ['The email address and password you entered do not match.'], status: 401
     end
   end
 
