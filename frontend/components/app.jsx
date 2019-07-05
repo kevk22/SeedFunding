@@ -20,6 +20,7 @@ const App = () => (
                 <img src="logo.png" className="logo" />
             </Link>
             <GreetingContainer  />
+            <div className="left-header"></div>
         </div>
 
         <AuthRoute exact path="/login" component={LogInFormContainer} />

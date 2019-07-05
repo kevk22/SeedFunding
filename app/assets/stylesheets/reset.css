@@ -47,6 +47,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: none;
+    
+}
+
 Previous Versions
 v1.0 (200802)
 Acknowledgments

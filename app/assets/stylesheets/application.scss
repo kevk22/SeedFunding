@@ -16,57 +16,46 @@
 
  
 .nav {
-    // height: 90px;
-    // width: 100%;
-    // position: fixed;
-    // top: 0;
-    // display: flex;
     position: relative;
     width: 100%;
-    // flex-wrap: nowrap;
     justify-content: space-between;
     border-color: #E8E8E8;
     border-bottom: 0.1rem solid #DCDEDD;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
-    // display: flex;
 } 
+
+.left-header {
+    display: flex;
+}
 
 .logo {
     display: block;
-    // text-align: center;
+    align-self: center;
     margin-left: auto;
     margin-right: auto;
     width:180px;
     height:20px;
-    // padding-top: 1.2rem;
-    // align-items: flex-end;
-    // margin-top: 50px;
-    // height: 4.2rem;
-    // width: auto;
-    // position: relative;
     padding-top: 1.2rem !important;
-    padding-bottom: 1.2rem !important;
-    // justify-content: center;
-    // flex: 0 0 auto;
-    // align-items: center;
-    // vertical-align: middle;
-    // width: 50;
-    // height: 50%;
-
-            // display: flex;
-
-            
+    padding-bottom: 1.2rem !important;            
 }
 
 .login-signup {
-    color: #282828;
+    // background-color: red;
+    color: green;
     cursor: pointer;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-right: 2.4rem;
     padding-bottom: 2.4rem;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    font-size: 14px;
 }
 
+.login-signup:hover {
+    color: red;
+}
 
 .center-screen {
   display: flex;
@@ -91,7 +80,6 @@
     text-align: center;
     cursor: pointer;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 .demo-submit {
@@ -147,10 +135,16 @@
 }
 
 .login-form-container {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
-    padding: 10px;
-    font-size: 100%;
     // display: block;
     // margin: 200px;
+}
+
+.ben-frank {
+    width: 42px;
+    height: 42px;
+    padding-right: 2.4rem;
+    padding-bottom: 2.4rem;
+    position: absolute;
+    top: 8px;
+    right: 0;
 }
