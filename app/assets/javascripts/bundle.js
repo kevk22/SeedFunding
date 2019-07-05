@@ -182,12 +182,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "nav"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/",
     className: "header-link"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "logo.png",
-    id: "logo"
+    className: "logo"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["AuthRoute"], {
     exact: true,
     path: "/login",
@@ -450,9 +452,9 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.demoUser({
-        email: 'demo',
+        email: 'kevin3@aa.io',
         password: 'password',
-        name: 'demo'
+        name: 'Kevin'
       }).then(function () {
         return _this3.props.history.push("/");
       });
@@ -462,24 +464,34 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "login-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "center-screen"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "login-form-box"
-      }, "Welcome to SeedFunding", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), "Please ", this.props.formType, " or ", this.props.navLink, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "frame-header"
+      }, "Have an account? ", this.props.navLink), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "frame-text"
+      }, "Sign up"), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "login-form"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Name:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "text",
         value: this.state.name,
+        autoFocus: "autofocus",
+        placeholder: "Name",
         onChange: this.update('name'),
         className: "login-input"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "text",
         value: this.state.email,
+        placeholder: "Email",
         onChange: this.update('email'),
         className: "login-input"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Password:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
+        placeholder: "Password",
         onChange: this.update('password'),
         className: "login-input"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
@@ -487,8 +499,9 @@ function (_React$Component) {
         type: "submit",
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        onClick: this.handleGuestSubmit
-      }, "Login as demo user"))));
+        onClick: this.handleGuestSubmit,
+        className: "demo-submit"
+      }, "Login as Demo User")))));
     }
   }]);
 
@@ -557,8 +570,8 @@ function (_React$Component) {
       email: '',
       password: ''
     };
-    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this)); // this.handleGuestSubmit = this.handleGuestSubmit.bind(this)
-
+    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this));
+    _this.demoLogin = _this.demoLogin.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7___default()(_this));
     return _this;
   }
 
@@ -606,7 +619,7 @@ function (_React$Component) {
               case 0:
                 e.preventDefault();
                 demoUser = {
-                  email: 'demo',
+                  email: 'kevin3@aa.io',
                   password: 'password'
                 };
 
@@ -688,21 +701,27 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "login-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "center-screen"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "login-form-box"
-      }, "Log in", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "frame-text"
+      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "login-form"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "text",
         id: "email-input",
         value: this.state.email,
+        placeholder: "Email",
         onChange: this.update('email'),
         className: "login-input"
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, "Password:", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "password",
         id: "password-input",
         value: this.state.password,
+        placeholder: "Password",
         onChange: this.update('password'),
         className: "login-input"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
@@ -711,8 +730,11 @@ function (_React$Component) {
         value: this.props.formType,
         id: "session-submit-btn"
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-        onClick: this.demoLogin.bind(this)
-      }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), "New to SeedFunding? ", this.props.navLink)));
+        onClick: this.demoLogin,
+        className: "demo-submit"
+      }, "Login as Demo User"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "bottom-signup"
+      }, "New to SeedFunding? ", this.props.navLink)))));
     }
   }]);
 
@@ -748,10 +770,10 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'signup',
+    formType: 'Create Account',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/login"
-    }, "log in instead")
+    }, "Log in")
   };
 };
 

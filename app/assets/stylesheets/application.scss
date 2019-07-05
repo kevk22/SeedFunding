@@ -15,25 +15,141 @@
  */
 
  
-header {
-    .login-signup {
-        float: right;
-        color: #282828;
-        cursor: pointer;
-        font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        padding-right: 2.4rem;
-        padding-bottom: 2.4rem;
-    }
-    #logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width:180px;
-        height:20px;
-        padding-top: 1.2rem;
-    }  
+.nav {
+    // height: 90px;
+    // width: 100%;
+    // position: fixed;
+    // top: 0;
+    // display: flex;
+    position: relative;
+    width: 100%;
+    // flex-wrap: nowrap;
+    justify-content: space-between;
+    border-color: #E8E8E8;
+    border-bottom: 0.1rem solid #DCDEDD;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    // display: flex;
 } 
 
+.logo {
+    display: block;
+    // text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:180px;
+    height:20px;
+    // padding-top: 1.2rem;
+    // align-items: flex-end;
+    // margin-top: 50px;
+    // height: 4.2rem;
+    // width: auto;
+    // position: relative;
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+    // justify-content: center;
+    // flex: 0 0 auto;
+    // align-items: center;
+    // vertical-align: middle;
+    // width: 50;
+    // height: 50%;
+
+            // display: flex;
+
+            
+}
+
+.login-signup {
+    color: #282828;
+    cursor: pointer;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-right: 2.4rem;
+    padding-bottom: 2.4rem;
+}
 
 
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #F7F7F6;
+}
 
+.session-submit {
+    width: 100%;
+    background-color: #009E74;
+    color: #FFFFFF !important;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.8rem;
+    font-size: .9rem;
+    font-weight: 300;
+    transition: all 0.25s ease-in-out !important;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.demo-submit {
+    width: 100%;
+    background-color: #39579A;
+    color: #FFFFFF !important;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.8rem;
+    font-size: .9rem;
+    font-weight: 300;
+    transition: all 0.25s ease-in-out !important;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.frame-header {
+    background-color: rgba(241,238,234,0.2);
+    border-bottom: 1px solid #F1EEEA;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #3D3D66;
+}
+
+.frame-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #282828;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 0.6rem;
+    margin-bottom: 20px;
+    font-weight: 320;
+}
+
+.login-input {
+    margin-bottom: 1.8rem;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%
+}
+
+.bottom-signup {
+    background-color: #FFFFFF;
+    border-top: 1px solid #F1EEEA;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #3D3D66;
+}
+
+.login-form-container {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+    padding: 20px;
+    font-size: 100%;
+    display: block;
+}

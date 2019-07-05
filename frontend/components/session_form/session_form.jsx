@@ -39,47 +39,64 @@ class SessionForm extends React.Component {
 
   handleGuestSubmit(e) {
     e.preventDefault();
-    this.props.demoUser({ email: 'demo', password: 'password', name: 'demo' })
+    this.props.demoUser({ email: 'kevin3@aa.io', password: 'password', name: 'Kevin' })
       .then(() => this.props.history.push("/"));
   }
 
   render() {
     return (
       <div className="login-form-container">
+        <div className="center-screen">
+        
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to SeedFunding
+        
+          <div className="frame-header">Have an account? {this.props.navLink}</div>
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+        
+          <div className="frame-text">Sign up</div>
           {this.renderErrors()}
+        
+        
           <div className="login-form">
-            <label>Name:
+            <label>
               <input type="text"
                 value={this.state.name}
+                autoFocus="autofocus"
+                placeholder="Name"
                 onChange={this.update('name')}
                 className="login-input"
               />
             </label>
+           
             <br/>
-            <label>Email:
+           
+            <label>
               <input type="text"
                 value={this.state.email}
+                placeholder="Email"
                 onChange={this.update('email')}
                 className="login-input"
               />
             </label>
+
             <br/>
-            <label>Password:
+
+            <label>
               <input type="password"
                 value={this.state.password}
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
+            
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
-            <button onClick={this.handleGuestSubmit}>Login as demo user</button>
+            
+            <button onClick={this.handleGuestSubmit} className="demo-submit">Login as Demo User</button>
           </div>
         </form>
+        </div>
       </div>
     );
   }

@@ -10,7 +10,7 @@ class SessionFormLogin extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleGuestSubmit = this.handleGuestSubmit.bind(this)
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -49,7 +49,7 @@ class SessionFormLogin extends React.Component {
     e.preventDefault();
 
     const demoUser = {
-      email: 'demo', password: 'password' 
+      email: 'kevin3@aa.io', password: 'password' 
     };
 
     const sleep = ms => new Promise(res => setTimeout(res, ms));
@@ -77,34 +77,39 @@ class SessionFormLogin extends React.Component {
   render() {
     return (
       <div className="login-form-container">
+        <div className="center-screen">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Log in
+            <div className="frame-text">Log in</div>
           <br/>
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
-            <label>Email:
+            <br/> 
+            <label>
               <input type="text" id="email-input"
                 value={this.state.email}
+                placeholder="Email"
                 onChange={this.update('email')}
                 className="login-input"
               />
             </label>
             <br/>
-            <label>Password:
+            <label>
               <input type="password" id="password-input"
                 value={this.state.password}
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} id="session-submit-btn" />
-            <button onClick={this.demoLogin.bind(this)}>Login as demo user</button>
+              <button onClick={this.demoLogin} className="demo-submit">Login as Demo User</button>
             <br/>
-            New to SeedFunding? {this.props.navLink}
+
+            <div className="bottom-signup">New to SeedFunding? {this.props.navLink}</div>
           </div>
         </form>
+        </div>
       </div>
     );
   }
