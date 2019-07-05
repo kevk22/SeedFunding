@@ -165,6 +165,23 @@ html {
     cursor: pointer;
 }
 
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // .form-line-active input:focus, .form-line-active textarea:focus {
 // border: 1px solid green !important;
 // box-shadow: 0 0 3px green !important;

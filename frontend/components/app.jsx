@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import Modal from './modal/modal';
 import {
     Route,
     Redirect,
@@ -15,12 +16,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
+        <Modal />
         <div className="nav">
             <Link to="/" className="header-link">
                 <img src="logo.png" className="logo" />
             </Link>
             <GreetingContainer  />
-            <div className="left-header"></div>
         </div>
 
         <AuthRoute exact path="/login" component={LogInFormContainer} />

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Greeting = ({ currentUser, logout }) => {
+    let that = this;
     const sessionLinks = () => (
         <nav className="login-signup">
             <Link to="/login">Sign in</Link>
@@ -14,6 +15,7 @@ const Greeting = ({ currentUser, logout }) => {
             {/* <h2 className="header-name">Hi, {currentUser.email}!</h2> */}
             
             <button className="header-button" onClick={logout}><img src="ben_frank.jpeg" className="ben-frank" /></button>
+            {/* <button className="header-button" onClick={() => that.props.openModal('profile')}><img src="ben_frank.jpeg" className="ben-frank" /></button> */}
         </hgroup>
     );
 
