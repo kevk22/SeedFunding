@@ -43,9 +43,7 @@ html {
 }
 
 .login-signup {
-    // background-color: red;
     color: white;
-    
     cursor: pointer;
     padding-right: 2.4rem;
     padding-bottom: 2.4rem;
@@ -53,10 +51,6 @@ html {
     top: 22px;
     right: 0;
     font-size: 14px;
-}
-
-.login-signup:hover {
-    color: red;
 }
 
 .center-screen {
@@ -105,6 +99,7 @@ html {
     text-align: center;
     color: #3D3D66;
     font-weight: 400;
+    
 }
 
 .frame-text {
@@ -126,6 +121,11 @@ html {
     position: relative;
     right: 135px;
     bottom: 20px
+}
+ 
+.login-input:focus {
+    // border-color: #009E74;;
+    outline: none;
 }
 
 .login-input {
@@ -177,10 +177,12 @@ html {
 
 .modal-child {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 11%;
+  right: 1%;
   transform: translate(-50%, -50%);
 }
+
+
 
 // .form-line-active input:focus, .form-line-active textarea:focus {
 // border: 1px solid green !important;

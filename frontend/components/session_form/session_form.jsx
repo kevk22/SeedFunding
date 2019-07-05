@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
         
         <form onSubmit={this.handleSubmit} className="login-form-box">
         
-          <div className="frame-header">Have an account? {this.props.navLink}</div>
+            <div className="frame-header">Have an account? {this.props.navLink}</div>
           <br/>
         
           <div className="sign-up-text">Sign up</div>
