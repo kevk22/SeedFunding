@@ -237,13 +237,13 @@ var Greeting = function Greeting(_ref) {
   var personalGreeting = function personalGreeting() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "header-group"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "header-button",
+      onClick: logout
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "ben_frank.jpeg",
       className: "ben-frank"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button",
-      onClick: logout
-    }, "Log Out"));
+    })));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();
@@ -475,7 +475,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "frame-header"
       }, "Have an account? ", this.props.navLink), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "frame-text"
+        className: "sign-up-text"
       }, "Sign up"), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {

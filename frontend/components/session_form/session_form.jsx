@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
           <div className="frame-header">Have an account? {this.props.navLink}</div>
           <br/>
         
-          <div className="frame-text">Sign up</div>
+          <div className="sign-up-text">Sign up</div>
           {this.renderErrors()}
         
         

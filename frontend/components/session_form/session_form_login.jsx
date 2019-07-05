@@ -79,11 +79,14 @@ class SessionFormLogin extends React.Component {
       <div className="login-form-container">
         <div className="center-screen">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+
             <div className="frame-text">Log in</div>
           <br/>
+
           {this.renderErrors()}
           <div className="login-form">
             <br/> 
+
             <label>
               <input type="text" id="email-input"
                 value={this.state.email}
@@ -92,6 +95,7 @@ class SessionFormLogin extends React.Component {
                 className="login-input"
               />
             </label>
+
             <br/>
             <label>
               <input type="password" id="password-input"
@@ -101,8 +105,9 @@ class SessionFormLogin extends React.Component {
                 className="login-input"
               />
             </label>
+
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} id="session-submit-btn" />
+              <input className="session-submit" type="submit" value={this.props.formType} id="session-submit-btn" />
               <button onClick={this.demoLogin} className="demo-submit">Login as Demo User</button>
             <br/>
 

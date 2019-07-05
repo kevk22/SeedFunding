@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+html {
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
  
 .nav {
     position: relative;
@@ -42,9 +44,9 @@
 
 .login-signup {
     // background-color: red;
-    color: green;
+    color: white;
+    
     cursor: pointer;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-right: 2.4rem;
     padding-bottom: 2.4rem;
     position: absolute;
@@ -79,7 +81,6 @@
     transition: all 0.25s ease-in-out !important;
     text-align: center;
     cursor: pointer;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .demo-submit {
@@ -94,26 +95,37 @@
     transition: all 0.25s ease-in-out !important;
     text-align: center;
     cursor: pointer;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .frame-header {
-    background-color: rgba(241,238,234,0.2);
+    // background-color: rgba(241,238,234,0.2);
     border-bottom: 1px solid #F1EEEA;
     padding: 20px;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     color: #3D3D66;
+    font-weight: 400;
 }
 
 .frame-text {
     font-size: 1.4rem;
     line-height: 1.5;
     color: #282828;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-top: 0.6rem;
-    margin-bottom: 20px;
-    font-weight: 320;
+    font-weight: 350;
+    position: relative;
+    right: 125px;
+}
+
+.sign-up-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #282828;
+    margin-top: 1.4rem;
+    font-weight: 350;
+    position: relative;
+    right: 135px;
+    bottom: 20px
 }
 
 .login-input {
@@ -134,9 +146,12 @@
     color: #3D3D66;
 }
 
-.login-form-container {
-    // display: block;
-    // margin: 200px;
+.login-form-box {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 170px;
 }
 
 .ben-frank {
@@ -147,4 +162,17 @@
     position: absolute;
     top: 8px;
     right: 0;
+    cursor: pointer;
 }
+
+// .form-line-active input:focus, .form-line-active textarea:focus {
+// border: 1px solid green !important;
+// box-shadow: 0 0 3px green !important;
+// -moz-box-shadow: 0 0 3px green !important;
+// -webkit-box-shadow: 0 0 3px green !important;
+// }
+
+// input:focus, textarea:focus, select:focus {
+// outline-offset: 0px !important;
+// outline: none !important;
+// }

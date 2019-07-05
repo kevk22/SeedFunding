@@ -12,8 +12,8 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
         <hgroup className="header-group">
             {/* <h2 className="header-name">Hi, {currentUser.email}!</h2> */}
-            <img src="ben_frank.jpeg" className="ben-frank" />
-            <button className="header-button" onClick={logout}>Log Out</button>
+            
+            <button className="header-button" onClick={logout}><img src="ben_frank.jpeg" className="ben-frank" /></button>
         </hgroup>
     );
 
