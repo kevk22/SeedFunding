@@ -4,27 +4,6 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import GreetingContainer from '../greeting/greeting_container';
 
-// function Modal({ modal, closeModal, logout }) {
-//     if (!modal) {
-//         return null;
-//     }
-//     let component;
-//     switch (modal) {
-//         case 'profile':
-//             component = <GreetingContainer />;
-//             break;
-//         default:
-//             return null;
-//     }
-//     return (
-//         <div className="modal-background" onClick={closeModal}>
-//             <div className="modal-child" onClick={e => e.stopPropagation()}>
-//                 {/* {component} */}
-//                 <button className="header-button" onClick={logout}>Logout</button>
-//             </div>
-//         </div>
-//     );
-// }
 
 class Modal extends React.Component {
     constructor(props) {

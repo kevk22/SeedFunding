@@ -27,9 +27,9 @@ html {
     border-bottom-style: solid;
 } 
 
-.left-header {
-    display: flex;
-}
+// .left-header {
+//     display: flex;
+// }
 
 .logo {
     display: block;
@@ -45,12 +45,17 @@ html {
 .login-signup {
     color: white;
     cursor: pointer;
-    padding-right: 2.4rem;
-    padding-bottom: 2.4rem;
+    // padding-right: 2.4rem;
+    // padding-bottom: 2.4rem;
     position: absolute;
     top: 22px;
-    right: 0;
+    right: 30px;
     font-size: 14px;
+}
+
+.login-signup:hover {
+    color: green !important;
+    text-decoration: underline;
 }
 
 .center-screen {
@@ -124,8 +129,9 @@ html {
 }
  
 .login-input:focus {
-    // border-color: #009E74;;
-    outline: none;
+    // border-style: solid;
+    border-color: #009E74;;
+    // outline: none;
 }
 
 .login-input {
@@ -171,27 +177,53 @@ html {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   z-index: 10;
+    // width: 150px;
+    // height: 250px;
+    // border: 1px solid #9b9e9e;
+    // background-color: white;
+    // position: absolute;
+    // right: 18px;
+    // top: 62px;
+    // padding: 0px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // z-index: 1;
 }
 
 .modal-child {
-  position: absolute;
-  top: 11%;
-  right: 1%;
-  transform: translate(-50%, -50%);
+//   position: absolute;
+//   top: 11%;
+//   right: 1%;
+//   transform: translate(-50%, -50%);
+  width: 150px;
+    height: 250px;
+    border: 1px solid #9b9e9e;
+    background-color: white;
+    position: absolute;
+    right: 18px;
+    top: 62px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
 }
 
+.header-button {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    font-size: 14px;
+    border: none;
+}
 
-
-// .form-line-active input:focus, .form-line-active textarea:focus {
-// border: 1px solid green !important;
-// box-shadow: 0 0 3px green !important;
-// -moz-box-shadow: 0 0 3px green !important;
-// -webkit-box-shadow: 0 0 3px green !important;
-// }
-
-// input:focus, textarea:focus, select:focus {
-// outline-offset: 0px !important;
-// outline: none !important;
-// }
+.header-button:hover{
+    color:#2752ff;
+    text-decoration: underline;
+}

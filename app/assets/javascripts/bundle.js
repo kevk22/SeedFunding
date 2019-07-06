@@ -270,15 +270,13 @@ var Greeting = function Greeting(_ref) {
   var personalGreeting = function personalGreeting() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "header-group"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button",
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "ben_frank.jpeg",
+      className: "ben-frank",
       onClick: function onClick() {
         return openModal('profile');
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: "ben_frank.jpeg",
-      className: "ben-frank"
-    })));
+    }));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();
@@ -369,27 +367,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // function Modal({ modal, closeModal, logout }) {
-//     if (!modal) {
-//         return null;
-//     }
-//     let component;
-//     switch (modal) {
-//         case 'profile':
-//             component = <GreetingContainer />;
-//             break;
-//         default:
-//             return null;
-//     }
-//     return (
-//         <div className="modal-background" onClick={closeModal}>
-//             <div className="modal-child" onClick={e => e.stopPropagation()}>
-//                 {/* {component} */}
-//                 <button className="header-button" onClick={logout}>Logout</button>
-//             </div>
-//         </div>
-//     );
-// }
+
 
 var Modal =
 /*#__PURE__*/
