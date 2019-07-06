@@ -43,7 +43,9 @@ class SessionFormLogin extends React.Component {
   //     .then(() => this.props.history.push("/"));
   // }
 
-
+  componentWillMount() {
+    this.props.clearErrors();
+  }
 
   async demoLogin(e) {
     e.preventDefault();
