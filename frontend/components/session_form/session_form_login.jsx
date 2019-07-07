@@ -37,12 +37,6 @@ class SessionFormLogin extends React.Component {
     );
   }
 
-  // handleGuestSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.demoUser({email: 'demo', password: 'password'})
-  //     .then(() => this.props.history.push("/"));
-  // }
-
   componentWillMount() {
     this.props.clearErrors();
   }
@@ -82,12 +76,12 @@ class SessionFormLogin extends React.Component {
         <div className="center-screen">
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            <div className="frame-text">Log in</div>
+          <div className="frame-text">Log in</div>
           <br/>
 
           {this.renderErrors()}
           <div className="login-form">
-            <br/> 
+          <br/> 
 
             <label>
               <input type="text" id="email-input"

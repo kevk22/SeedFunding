@@ -10,7 +10,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleGuestSubmit = this.handleGuestSubmit.bind(this)
+    this.handleGuestSubmit = this.handleGuestSubmit.bind(this);
   }
 
   update(field) {
@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
         
         <form onSubmit={this.handleSubmit} className="login-form-box">
         
-            <div className="frame-header">Have an account? {this.props.navLink}</div>
+          <div className="frame-header">Have an account? {this.props.navLink}</div>
           <br/>
         
           <div className="sign-up-text">Sign up</div>
@@ -95,9 +95,9 @@ class SessionForm extends React.Component {
             </label>
             
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-            
+            <input className="session-submit" type="submit" value={this.props.formType} /> 
             <button onClick={this.handleGuestSubmit} className="demo-submit">Login as Demo User</button>
+            
           </div>
         </form>
         </div>

@@ -778,12 +778,7 @@ function (_React$Component) {
           key: "error-".concat(i)
         }, error);
       }));
-    } // handleGuestSubmit(e) {
-    //   e.preventDefault();
-    //   this.props.demoUser({email: 'demo', password: 'password'})
-    //     .then(() => this.props.history.push("/"));
-    // }
-
+    }
   }, {
     key: "componentWillMount",
     value: function componentWillMount() {

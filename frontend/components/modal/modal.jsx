@@ -16,10 +16,10 @@ class Modal extends React.Component {
     }
 
     render() {
-        
         if (!this.props.modal) {
             return null;
         }
+
         let component;
         switch (this.props.modal) {
             case 'profile':
@@ -28,6 +28,7 @@ class Modal extends React.Component {
             default:
                 return null;
         }
+        
         return (
             <div className="modal-background" onClick={this.props.closeModal}>
                 <div className="modal-child" onClick={e => e.stopPropagation()}>
