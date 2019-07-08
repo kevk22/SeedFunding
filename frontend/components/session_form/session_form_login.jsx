@@ -79,7 +79,7 @@ class SessionFormLogin extends React.Component {
           <div className="frame-text">Log in</div>
           <br/>
 
-          {this.renderErrors()}
+          <div className="session-errors">{this.renderErrors()}</div>
           <div className="login-form">
           <br/> 
 
@@ -104,10 +104,11 @@ class SessionFormLogin extends React.Component {
 
             <br/>
               <input className="session-submit" type="submit" value={this.props.formType} id="session-submit-btn" />
+              <br />  
               <button onClick={this.demoLogin} className="demo-submit">Login as Demo User</button>
             <br/>
 
-            <div className="bottom-signup">New to SeedFunding? {this.props.navLink}</div>
+              <div className="bottom-signup">New to SeedFunding? {this.props.navLink}</div>
           </div>
         </form>
         </div>

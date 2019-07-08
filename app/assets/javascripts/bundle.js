@@ -302,7 +302,8 @@ var Greeting = function Greeting(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/login"
+      to: "/login",
+      className: "signin-header"
     }, "Sign in"));
   };
 
@@ -544,9 +545,10 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'Log me in!',
+    formType: "Log me in!",
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/signup"
+      to: "/signup",
+      className: "button-color"
     }, "Sign up!")
   };
 };
@@ -684,7 +686,9 @@ function (_React$Component) {
         className: "frame-header"
       }, "Have an account? ", this.props.navLink), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "sign-up-text"
-      }, "Sign up"), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "signup-errors"
+      }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "text",
@@ -692,24 +696,24 @@ function (_React$Component) {
         autoFocus: "autofocus",
         placeholder: "Name",
         onChange: this.update('name'),
-        className: "login-input"
+        className: "input-boxes-signup"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "text",
         value: this.state.email,
         placeholder: "Email",
         onChange: this.update('email'),
-        className: "login-input"
+        className: "input-boxes-signup"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         placeholder: "Password",
         onChange: this.update('password'),
-        className: "login-input"
+        className: "input-boxes-signup"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: this.handleGuestSubmit,
         className: "demo-submit"
       }, "Login as Demo User")))));
@@ -919,7 +923,9 @@ function (_React$Component) {
         className: "login-form-box"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "frame-text"
-      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "session-errors"
+      }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "text",
@@ -940,7 +946,7 @@ function (_React$Component) {
         type: "submit",
         value: this.props.formType,
         id: "session-submit-btn"
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
         onClick: this.demoLogin,
         className: "demo-submit"
       }, "Login as Demo User"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -983,7 +989,8 @@ var mapStateToProps = function mapStateToProps(_ref) {
     errors: errors.session,
     formType: 'Create Account',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/login"
+      to: "/login",
+      className: "button-color"
     }, "Log in")
   };
 };

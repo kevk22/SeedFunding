@@ -53,10 +53,6 @@ html {
     font-size: 14px;
 }
 
-.login-signup:hover {
-    color: green !important;
-    text-decoration: underline;
-}
 
 .center-screen {
   display: flex;
@@ -69,7 +65,7 @@ html {
 }
 
 .session-submit {
-    width: 100%;
+    width: 320px;
     background-color: #009E74;
     color: #FFFFFF !important;
     height: 2.5rem;
@@ -77,13 +73,15 @@ html {
     padding: 0 1.8rem;
     font-size: .9rem;
     font-weight: 300;
-    transition: all 0.25s ease-in-out !important;
+    // transition: all 0.25s ease-in-out !important;
     text-align: center;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 }
 
+
 .demo-submit {
-    width: 100%;
+    width: 320px;
     background-color: #39579A;
     color: #FFFFFF !important;
     height: 2.5rem;
@@ -104,28 +102,61 @@ html {
     text-align: center;
     color: #3D3D66;
     font-weight: 400;
+    background-color: #FCFCFB;
     
 }
 
+.button-color {
+    color: #2752ff;
+}
+
+.button-color:hover {
+    color: black;
+}
+
+.signin-header {
+    color: #282828;
+
+}
+
+.signin-header:hover {
+    color: #009E74;
+}
+
 .frame-text {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 1.5;
     color: #282828;
     margin-top: 0.6rem;
     font-weight: 350;
     position: relative;
-    right: 125px;
+    right: 120px;
 }
 
 .sign-up-text {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 1.5;
     color: #282828;
     margin-top: 1.4rem;
     font-weight: 350;
     position: relative;
-    right: 135px;
+    right: 110px;
     bottom: 20px
+}
+
+.input-boxes-signup {
+    width: 320px;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 1.0rem;
+}
+
+.input-boxes-signup:focus {
+    border-style: solid;
+    border-color: #009E74;;
+    outline: none;
 }
  
 .login-input:focus {
@@ -135,7 +166,7 @@ html {
 }
 
 .login-input {
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.0rem;
     box-sizing: border-box;
     padding: 12px;
     font-size: 14px;
@@ -179,26 +210,10 @@ html {
   left: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 10;
-    // width: 150px;
-    // height: 250px;
-    // border: 1px solid #9b9e9e;
-    // background-color: white;
-    // position: absolute;
-    // right: 18px;
-    // top: 62px;
-    // padding: 0px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // z-index: 1;
 }
 
 .modal-child {
-//   position: absolute;
-//   top: 11%;
-//   right: 1%;
-//   transform: translate(-50%, -50%);
-  width: 150px;
+    width: 150px;
     height: 250px;
     border: 1px solid #9b9e9e;
     background-color: white;
@@ -213,7 +228,6 @@ html {
 }
 
 .header-button {
-    color: black;
     background-color: white;
     cursor: pointer;
     position: absolute;
@@ -223,7 +237,20 @@ html {
     border: none;
 }
 
-.header-button:hover{
-    color:#2752ff;
-    text-decoration: underline;
+.session-errors {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 80px;
 }
+
+.signup-errors {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 90px;
+    left: 120px;
+    // border: 1px dotted;
+
+}
+

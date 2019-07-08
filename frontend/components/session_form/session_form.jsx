@@ -58,7 +58,7 @@ class SessionForm extends React.Component {
           <br/>
         
           <div className="sign-up-text">Sign up</div>
-          {this.renderErrors()}
+          <div className="signup-errors">{this.renderErrors()}</div>
         
         
           <div className="login-form">
@@ -68,7 +68,7 @@ class SessionForm extends React.Component {
                 autoFocus="autofocus"
                 placeholder="Name"
                 onChange={this.update('name')}
-                className="login-input"
+                className="input-boxes-signup"
               />
             </label>
            
@@ -79,8 +79,7 @@ class SessionForm extends React.Component {
                 value={this.state.email}
                 placeholder="Email"
                 onChange={this.update('email')}
-                className="login-input"
-              />
+                className="input-boxes-signup"              />
             </label>
 
             <br/>
@@ -90,14 +89,14 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
-                className="login-input"
-              />
+                className="input-boxes-signup"              />
             </label>
             
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} /> 
+            <br/>
             <button onClick={this.handleGuestSubmit} className="demo-submit">Login as Demo User</button>
-            
+
           </div>
         </form>
         </div>

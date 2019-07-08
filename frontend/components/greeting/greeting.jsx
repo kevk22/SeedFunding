@@ -6,7 +6,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
     const sessionLinks = () => (
         <nav className="login-signup">
-            <Link to="/login">Sign in</Link>
+            <Link to="/login" className="signin-header">Sign in</Link>
         </nav>
     );
 
