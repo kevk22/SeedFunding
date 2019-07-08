@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_07_013146) do
+ActiveRecord::Schema.define(version: 2019_07_07_233617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,51 @@ ActiveRecord::Schema.define(version: 2019_07_07_013146) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer "amount", null: false
+    t.integer "user_id", null: false
+    t.integer "project_id", null: false
+    t.integer "reward_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_pledges_on_project_id"
+    t.index ["reward_id"], name: "index_pledges_on_reward_id"
+    t.index ["user_id"], name: "index_pledges_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.text "body", null: false
+    t.datetime "funding_expiration", null: false
+    t.integer "funding_goal", null: false
+    t.integer "category_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_projects_on_category_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "rewards", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.datetime "delivery_date", null: false
+    t.integer "price", null: false
+    t.integer "backer_count", null: false
+    t.integer "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_rewards_on_project_id"
   end
 
   create_table "users", force: :cascade do |t|
