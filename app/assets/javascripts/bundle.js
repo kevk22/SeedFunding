@@ -932,6 +932,7 @@ function (_React$Component) {
         id: "email-input",
         value: this.state.email,
         placeholder: "Email",
+        autoFocus: "autofocus",
         onChange: this.update('email'),
         className: "login-input"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {

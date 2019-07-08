@@ -87,6 +87,7 @@ class SessionFormLogin extends React.Component {
               <input type="text" id="email-input"
                 value={this.state.email}
                 placeholder="Email"
+                autoFocus="autofocus"
                 onChange={this.update('email')}
                 className="login-input"
               />
