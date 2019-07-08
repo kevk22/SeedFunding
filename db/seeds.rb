@@ -19,6 +19,15 @@ user6 = User.create!(name: 'Marc', email: 'marc6@aa.io', password: 'password')
 user7 = User.create!(name: 'Spencer', email: 'spencer7@aa.io', password: 'password')
 user8 = User.create!(name: 'Jesus', email: 'jesus8@aa.io', password: 'password')
 
+category1 = Category.create!(name: "Arts", description: "Discover the artists and organizations using SeedFunding to realize ambitious projects in visual art and performance.")
+category2 = Category.create!(name: "Comics & Illustration", description: "Explore fantastical worlds and original characters from SeedFunding community of comics creators and illustrators.")
+category3 = Category.create!(name: "Design & Tech", description: "From fine design to innovative tech, discover projects from creators working to build a more beautiful future.")
+category4 = Category.create!(name: "Film", description: "Join forces with the intrepid filmmakers and festival creators changing the way stories get told on screen.")
+category5 = Category.create!(name: "Food & Craft", description: "See how artisans and entrepreneurs are using SeedFunding to break new ground in food, fashion, and crafts.")
+category6 = Category.create!(name: "Games", description: "From tabletop adventures to beloved revivals, discover the projects forging the future of gameplay.")
+category7 = Category.create!(name: "Music", description: "Discover new albums, performances, and independent venues from creators using SeedFunding to shape the future of sound.")
+category8 = Category.create!(name: "Publishing", description: "Explore how writers and publishers are using SeedFunding to bring new literature, periodicals, podcasts, and more to life.")
+
 project1 = Project.create!(name: "Basquiat", description: "Jean-Michel Basquiat", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
     was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
     who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
@@ -43,14 +52,4 @@ project7 = Project.create!(name: "n + 2pac", description: "n+2pac", body: "n+2pa
     user_id: user7.id, category_id: category7.id) 
 project8 = Project.create!(name: "Scary Potter", description: "The other side of Hogwarts", body: "The prequel to your favorite book series.", 
     funding_expiration: DateTime.new(2029, 6, 26), funding_goal: 10000000, user_id: user8.id, category_id: category8.id) 
-
-category1 = Category.new(name: "Arts", description: "Discover the artists and organizations using SeedFunding to realize ambitious projects in visual art and performance.")
-category2 = Category.new(name: "Comics & Illustration", description: "Explore fantastical worlds and original characters from SeedFunding community of comics creators and illustrators.")
-category3 = Category.new(name: "Design & Tech", description: "From fine design to innovative tech, discover projects from creators working to build a more beautiful future.")
-category4 = Category.new(name: "Film", description: "Join forces with the intrepid filmmakers and festival creators changing the way stories get told on screen.")
-category5 = Category.new(name: "Food & Craft", description: "See how artisans and entrepreneurs are using SeedFunding to break new ground in food, fashion, and crafts.")
-category6 = Category.new(name: "Games", description: "From tabletop adventures to beloved revivals, discover the projects forging the future of gameplay.")
-category7 = Category.new(name: "Music", description: "Discover new albums, performances, and independent venues from creators using SeedFunding to shape the future of sound.")
-category8 = Category.new(name: "Publishing", description: "Explore how writers and publishers are using SeedFunding to bring new literature, periodicals, podcasts, and more to life.")
-
 
