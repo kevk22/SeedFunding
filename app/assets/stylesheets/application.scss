@@ -27,10 +27,6 @@ html {
     border-bottom-style: solid;
 } 
 
-// .left-header {
-//     display: flex;
-// }
-
 .logo {
     display: block;
     align-self: center;
@@ -45,8 +41,6 @@ html {
 .login-signup {
     color: white;
     cursor: pointer;
-    // padding-right: 2.4rem;
-    // padding-bottom: 2.4rem;
     position: absolute;
     top: 22px;
     right: 30px;
@@ -73,7 +67,6 @@ html {
     padding: 0 1.8rem;
     font-size: .9rem;
     font-weight: 300;
-    // transition: all 0.25s ease-in-out !important;
     text-align: center;
     cursor: pointer;
     margin-bottom: 0.5rem;
@@ -95,7 +88,6 @@ html {
 }
 
 .frame-header {
-    // background-color: rgba(241,238,234,0.2);
     border-bottom: 1px solid #F1EEEA;
     padding: 20px;
     font-size: 15px;
@@ -103,7 +95,6 @@ html {
     color: #3D3D66;
     font-weight: 400;
     background-color: #FCFCFB;
-    
 }
 
 .button-color {
@@ -250,7 +241,5 @@ html {
     position: absolute;
     top: 90px;
     left: 120px;
-    // border: 1px dotted;
-
 }
 
