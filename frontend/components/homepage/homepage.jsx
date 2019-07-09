@@ -15,7 +15,7 @@ export default class Homepage extends React.Component {
     render() {
         let category = Object.values(this.props.categories).map(category => {
             return(
-                <li className="category-button">{category.name}</li>
+                <li className="category-button" key={category.id}>{category.name}</li>
             )
         });
       

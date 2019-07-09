@@ -493,7 +493,8 @@ function (_React$Component) {
     value: function render() {
       var category = Object.values(this.props.categories).map(function (category) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-          className: "category-button"
+          className: "category-button",
+          key: category.id
         }, category.name);
       });
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {

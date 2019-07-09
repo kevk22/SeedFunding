@@ -1,7 +1,7 @@
 .category-nav {
   display: flex;
   flex-flow: row nowrap;
-  margin-top: 2rem;
+  margin-top: 3rem;
   border-bottom: 1px solid #E8E8E8;    
   font-size: 16px;
   max-width: 1400px;
@@ -10,21 +10,22 @@
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto; 
-  padding-left: 230px;
-  padding-right: 230px;
+  padding-left: 290px;
+  padding-right: 290px;
 }
 
 .category-button {
     color: #656969;
     position: relative;
-    bottom: 14px;
+    bottom: 22px;
     cursor: pointer;
+    font-weight: 200;
 }
 
 .category-button:hover {
     color: #034752;
     text-decoration: underline;
     font-weight: 500;
-    transition: height 0.3s, opacity 0.5s, transform 0.3s, color 0.3s;
+    transition: height 0.5s, opacity 0.5s, transform 0.7s, color 0.3s;
     transform: translateY(0px);
 }
