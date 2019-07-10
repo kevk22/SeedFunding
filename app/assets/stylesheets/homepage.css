@@ -40,7 +40,7 @@
     /* margin-block-end: 1em; */
     /* margin-inline-start: 0px;
     margin-inline-end: 0px; */
-    padding-left: 90px;
+    padding-left: 150px;
     padding-right: 60px;
     padding-top: 30px;
     font-weight: 100;
@@ -48,10 +48,59 @@
 
 .category-description {
     font-family: "Cooper Light", Georgia, Times, "Times New Roman", serif;;
-    padding-left: 90px;
+    padding-left: 150px;
     padding-right: 60px;
     padding-top: .5rem;
     font-size: 17px;
     font-weight: 200;
     color: #656969;
 }
+
+.featured-product-text {
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #656969;
+    font-size: 15px;
+    line-height: 1.8rem;
+    padding-left: 150px;
+    padding-top: 50px;
+
+}
+
+.featured-pic-container {
+    width: 900px;
+    border-right: #E8E8E8 1.25px solid;
+}
+ 
+.featured-pic {
+    padding-left: 150px;
+    height: 550px;
+    width: 800px; 
+    box-sizing: border-box;
+
+}
+
+.featured-name {
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 150px;
+    font-size: 28px;
+    color: #282828;
+}
+
+
+.featured-description {
+    font-family: "Cooper Light", Georgia, Times, "Times New Roman", serif;
+    padding-left: 150px;
+    font-size: 18px;
+    color: #656969;
+}
+
+.featured-creator {
+    padding-left: 150px;
+    padding-top: 12px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #282828;
+}
+

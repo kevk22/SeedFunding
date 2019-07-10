@@ -28,7 +28,7 @@ category6 = Category.create!(name: "Games", description: "From tabletop adventur
 category7 = Category.create!(name: "Music", description: "Discover new albums, performances, and independent venues from creators using SeedFunding to shape the future of sound.")
 category8 = Category.create!(name: "Publishing", description: "Explore how writers and publishers are using SeedFunding to bring new literature, periodicals, podcasts, and more to life.")
 
-project1 = Project.create!(name: "Basquiat", description: "Jean-Michel Basquiat", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+project1 = Project.create!(name: "Jean-Michel Basquiat", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
     was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
     who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
     art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
@@ -44,11 +44,11 @@ project3 = Project.create!(name: "Kuul", description: "A modern vape pen that bo
     funding_expiration: DateTime.new(2020, 4, 20), funding_goal: 420000, user_id: user3.id, category_id: category3.id)
 project4 = Project.create!(name: "Source Code", description: "The search for bugs", body: "Find out if any bugs haunt the source code", 
     funding_expiration: DateTime.new(2023, 7, 7), funding_goal: 8888888, user_id: user4.id, category_id: category4.id) 
-project5 = Project.create!(name: "Kevin's Coffee", description: "A new way to exeperience your favorite drink", body: "Kevin's Coffee is the best coffee.", 
+project5 = Project.create!(name: "Kevin's Coffee", description: "A new way to exeperience your favorite caffeinated beverage", body: "Kevin's Coffee is the best coffee.", 
     funding_expiration: DateTime.new(2022, 2, 22), funding_goal: 23000, user_id: user5.id, category_id: category5.id) 
 project6 = Project.create!(name: "Code World", description: "An interactive virtual coding world", body: "A place to see your code come to life. Change your code to change your world", 
     funding_expiration: DateTime.new(2025, 6, 6), funding_goal: 520000000, user_id: user6.id, category_id: category6.id) 
-project7 = Project.create!(name: "n + 2pac", description: "n+2pac", body: "n+2pac", funding_expiration: DateTime.new(2026, 9, 13), funding_goal: 890000,
+project7 = Project.create!(name: "n + 2pac", description: "New music from n + 2pac", body: "n + 2pac", funding_expiration: DateTime.new(2026, 9, 13), funding_goal: 890000,
     user_id: user7.id, category_id: category7.id) 
 project8 = Project.create!(name: "Scary Potter", description: "The other side of Hogwarts", body: "The prequel to your favorite book series.", 
     funding_expiration: DateTime.new(2029, 6, 26), funding_goal: 10000000, user_id: user8.id, category_id: category8.id) 

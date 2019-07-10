@@ -28,6 +28,10 @@ const App = () => (
         <Route exact path="/" component={HomepageContainer}/>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+
+        <footer className="footer">
+            
+        </footer>
     </div>
 );
 

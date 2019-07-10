@@ -8,21 +8,32 @@ export default class Homepage extends React.Component {
         super(props);
 
         this.state = {
-            curCategoryID: 1
+            curCategoryID: null
         };
     }
 
     componentDidMount() {
         this.props.fetchProjects();
         this.props.fetchCategoryIndex();
+        this.props.fetchUsers();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.categories !== this.props.categories) {
+            this.setState ({curCategoryID: Object.keys(this.props.categories).sort( (a,b) => (parseInt(a) < parseInt(b)))[0]})
+        }
     }
 
     render() {
-        
         if (Object.values(this.props.categories).length === 0){
             return null;
         } 
-        
+        if (Object.values(this.props.projects).length === 0) {
+            return null;
+        } 
+        if (Object.values(this.props.users).length === 0) {
+            return null;
+        } 
         let category = Object.values(this.props.categories).map(category => {
             return(
                 <div className="category-button" key={category.id} 

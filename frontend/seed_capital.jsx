@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import { login, signup, logout } from './actions/session_actions';
 import { fetchProjects } from './actions/project_actions';
 import { fetchCategoryIndex } from './actions/category_actions';
+import { fetchUsers } from './actions/session_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     window.login = login;
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.fetchProjects = fetchProjects;
     window.fetchCategoryIndex = fetchCategoryIndex;
+    window.fetchUsers = fetchUsers;
 
     let store;
     if (window.currentUser) {
