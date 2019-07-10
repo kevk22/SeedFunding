@@ -3,10 +3,10 @@ import * as APIUtil from '../util/project_api_util';
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 
-const receiveProjects = (projects) => {
+const receiveProjects = (payload) => {
     return ({
         type: RECEIVE_PROJECTS,
-        projects
+        payload
     });
 };
 

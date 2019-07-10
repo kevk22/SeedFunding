@@ -6,7 +6,7 @@ import Homepage from './homepage';
 
 const mapStateToProps = state => {
     return {
-        founder: state.entities.users,
+        users: state.entities.users,
         projects: Object.values(state.entities.projects),
         categories: state.entities.categories
     };

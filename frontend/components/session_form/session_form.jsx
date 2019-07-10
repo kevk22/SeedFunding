@@ -68,8 +68,7 @@ class SessionForm extends React.Component {
                 autoFocus="autofocus"
                 placeholder="Name"
                 onChange={this.update('name')}
-                className="input-boxes-signup"
-              />
+                className="input-boxes-signup"              />
             </label>
            
             <br/>

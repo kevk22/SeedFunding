@@ -22,7 +22,7 @@ const App = () => (
             <Link to="/" className="header-link">
                 <img src="logo.png" className="logo" />
             </Link>
-            <GreetingContainer  />
+            <GreetingContainer />
         </div>
 
         <Route exact path="/" component={HomepageContainer}/>
