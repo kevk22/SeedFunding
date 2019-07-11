@@ -13,12 +13,13 @@
     /* border: 1px solid blue; */
 }
 
-.project-title{
+.project-title {
     color: #282828;
     font-size: 40px;
     margin: 0px 0px 18px;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
+    /* word-spacing: 5px; */
 }
 
 .project-description {
@@ -34,7 +35,48 @@
     height: 550px;
     width: 800px; 
     box-sizing: border-box;
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
     /* border-bottom: #E8E8E8 1.25px solid; */
 }
 
+.about {
+    padding-left: 150px;
+    font-size: 20px;
+    color: #282828;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-top: #E8E8E8 1.25px solid;
+}
+
+.project-body {
+    width: 800px;
+    line-height: 1.6;
+}
+
+.goal-container {
+    position: absolute;
+
+    height: 300px;
+    width: 400px;
+    right: 170px;
+    /* border: 1px solid blue; */
+    border-top: 3px solid #037362
+}
+
+.funding_goal {
+    padding-top: 30px;
+    color: #037362;
+    font-size: 24px;
+    
+}
+
+.goal-text { 
+    padding-top: 6px;
+    font-size: 14px;
+    color: #656969;
+}
+
+.days-number {
+    padding-top: 30px;
+    font-size: 24px;
+}

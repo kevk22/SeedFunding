@@ -885,8 +885,18 @@ function (_React$Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ProjectShow, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
     key: "render",
     value: function render() {
+      var expRuby = this.props.project.funding_expiration.split("-");
+      var expYear = expRuby[0];
+      var expMonth = expRuby[1];
+      var curDate = new Date();
+      var expDate = new Date(expYear, expMonth, 1);
+      var oneDay = 24 * 60 * 60 * 1000;
+      var diffDays = Math.round(Math.abs((expDate.getTime() - curDate.getTime()) / oneDay));
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "project-header-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -895,10 +905,24 @@ function (_React$Component) {
         className: "project-title"
       }, " ", this.props.project.name, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "project-description"
-      }, this.props.project.description))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, this.props.project.description))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "goal-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "funding_goal"
+      }, "$" + new Intl.NumberFormat().format(this.props.project.funding_goal)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "goal-text"
+      }, "Funding Goal"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "days-number"
+      }, diffDays), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "goal-text"
+      }, "Days To Go")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         src: this.props.category.name + ".jpeg",
         className: "project-pic"
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.project.description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.project.body));
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "about"
+      }, "About"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "project-body"
+      }, this.props.project.body));
     }
   }]);
 
