@@ -37,9 +37,13 @@ export default class ProjectShow extends React.Component {
                     <div className="goal-container">
                         <div className="funding_goal">{"$" + new Intl.NumberFormat().format(this.props.project.funding_goal)}</div>
                         <div className="goal-text">Funding Goal</div>
+                        <div className="days-number">10</div>
+                        <div className="goal-text">Backers</div>
                         <div className="days-number">{diffDays}</div>
                         <div className="goal-text">Days To Go</div>
-                        {/* <div>Founded by </div> */}
+                        <div className="all-or-none">All or nothing. This project will only be funded if it reaches its goal in {diffDays} days.</div>
+
+                        <button className="back-this-button">Back This Project</button>
                     </div>
                     <img src={this.props.category.name + ".jpeg"} className="project-pic" />
                 </div>

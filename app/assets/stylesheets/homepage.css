@@ -71,13 +71,13 @@
 
 .featured-pic-container {
     width: 720px;
-    height: 680px;
+    height: 610px;
     border-right: #E8E8E8 1.25px solid;
     padding-left: 150px;
 }
  
 .featured-pic {
-    height: 550px;
+    height: 500px;
     width: 650px; 
     box-sizing: border-box;
 }
@@ -88,6 +88,11 @@
     font-size: 28px;
     color: #282828;
     padding-top: 12px;
+}
+
+.featured-name:hover {
+    color: #009E74;
+    text-decoration: underline;
 }
 
 
@@ -128,7 +133,7 @@
 
 .recommended-container {
     position: absolute;
-    height: 550px;
+    height: 500px;
     width: 370px;
     right: 158px;
     /* border: 1px solid blue; */
@@ -138,7 +143,7 @@
 .rec-project-container {
     /* border: 1px dotted blue; */
     height: 150px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: relative;
     
@@ -152,24 +157,42 @@
 
 .rec-project-name {
     position: absolute;
-    right: 28px;
+    left: 205px;
     top: 3px;
     font-size: 14px;
+    color: #282828;
     
 }
 
 .rec-project-name2 {
     position: absolute;
-    right: 28px;
+    left: 205px;
     top: 3px;
     font-size: 14px;
+    color: #282828;
 }
 
 .rec-project-name3 {
     position: absolute;
-    right: 28px;
+    left: 205px;
     top: 3px;
     font-size: 14px;
+    color: #282828;
+}
+
+.rec-project-name:hover {
+    color: #009E74;
+    text-decoration: underline;
+}
+
+.rec-project-name2:hover {
+    color: #009E74;
+    text-decoration: underline;
+}
+
+.rec-project-name3:hover {
+    color: #009E74;
+    text-decoration: underline;
 }
 
 .line-1 {
@@ -183,12 +206,12 @@
     border-bottom: 1.25px solid #E8E8E8;
     position: absolute;
     width: 370px;
-    top: 320px;
+    top: 310px;
 }
 
 .rec-creator {
     position: absolute;
-    right: 124px;
+    left: 205px;
     top: 25px;
     font-size: 12px;
     font-weight: 100;
@@ -197,7 +220,7 @@
 
 .rec-creator2 {
     position: absolute;
-    right: 124px;
+    left: 205px;
     top: 25px;
     font-size: 12px;
     font-weight: 100;
@@ -206,9 +229,33 @@
 
 .rec-creator3 {
     position: absolute;
-    right: 124px;
+    left: 205px;
     top: 25px;
     font-size: 12px;
     font-weight: 100;
     color: #282828;
+}
+
+.percent-funded {
+    color: #037362;
+    position: absolute;
+    left: 205px;
+    top: 50px;
+    font-size: 12px;
+}
+
+.percent-funded2 {
+    color: #037362;
+    position: absolute;
+    left: 205px;
+    top: 50px;
+    font-size: 12px;
+}
+
+.percent-funded3 {
+    color: #037362;
+    position: absolute;
+    left: 205px;
+    top: 50px;
+    font-size: 12px;
 }

@@ -59,14 +59,14 @@
     width: 400px;
     right: 170px;
     /* border: 1px solid blue; */
-    border-top: 3px solid #037362
+    border-top: 3px solid #037362;
+    border-bottom: 3px solid #037362;
 }
 
 .funding_goal {
     padding-top: 30px;
     color: #037362;
     font-size: 24px;
-    
 }
 
 .goal-text { 
@@ -78,4 +78,28 @@
 .days-number {
     padding-top: 30px;
     font-size: 24px;
+}
+
+.back-this-button{
+    width: 400px;
+    background-color: #009E74;
+    color: #FFFFFF !important;
+    height: 45px;
+    line-height: 2.5rem;
+    padding: 0 1.8rem;
+    font-size: .9rem;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 260px;
+}
+
+.all-or-none {
+    color: #282828;
+    font-size: 12px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 10px;
 }
