@@ -69,35 +69,37 @@
 }
 
 .featured-pic-container {
-    width: 900px;
+    width: 720px;
+    height: 680px;
     border-right: #E8E8E8 1.25px solid;
+    padding-left: 150px;
 }
  
 .featured-pic {
-    padding-left: 150px;
     height: 550px;
-    width: 800px; 
+    width: 650px; 
     box-sizing: border-box;
 
 }
 
 .featured-name {
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-left: 150px;
+    /* padding-left: 150px; */
     font-size: 28px;
     color: #282828;
+    padding-top: 12px;
 }
 
 
 .featured-description {
     font-family: "Cooper Light", Georgia, Times, "Times New Roman", serif;
-    padding-left: 150px;
+    /* padding-left: 150px; */
     font-size: 18px;
     color: #656969;
 }
 
 .featured-creator {
-    padding-left: 150px;
+    /* padding-left: 150px; */
     padding-top: 12px;
     font-size: 14px;
     font-weight: 100;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 export default class HomeCategory extends React.Component {
     constructor(props) {
@@ -30,21 +31,26 @@ export default class HomeCategory extends React.Component {
             <div className="featured-product-text">Featured Project</div>
                 <br />
             <div className="featured-pic-container">
+                    <Link to={`/projects/${this.props.catID}`}>
                     <img src={this.state.curCategory.name + ".jpeg"} className="featured-pic" />
+                    <div className="featured-name">
+                        {this.props.projects && this.props.projects[this.props.catID].name}
+                    </div>
+                    </Link>
+                    <br />
+
+                    <div className="featured-description">
+                        {this.props.projects && this.props.projects[this.props.catID].description}
+                    </div>
+                    <br />
+
+                    <div className="featured-creator">
+                        By {this.props.users && this.props.users[this.props.catID].name}
+                    </div>
+
             </div>
                 <br/>
-            <div className="featured-name">
-                    {this.props.projects && this.props.projects[this.props.catID].name}
-            </div>
-                <br/>
-            <div className="featured-description">
-                {this.props.projects && this.props.projects[this.props.catID].description}
-            </div>
-                <br />
-            <div className="featured-creator">
-                By {this.props.users && this.props.users[this.props.catID].name}
-            </div>
-            
+           
         </div>
         )
     }
