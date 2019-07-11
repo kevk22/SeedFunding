@@ -22,7 +22,11 @@ export default class HomeCategory extends React.Component {
             return null;
         }
 
-        if(this.props.projects === null || this.props.users === null) {
+        if(this.props.projects === null || this.props.users === undefined) {
+            return null;
+        }
+
+        if(this.props.projects === undefined || this.props.users === null) {
             return null;
         }
        

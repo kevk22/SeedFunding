@@ -12,7 +12,11 @@ export default class ProjectShow extends React.Component {
     }
 
     render() {
-        if (this.props.project === null || this.props.category === null) {
+        if (this.props.project === null || this.props.category === undefined) {
+            return null;
+        }
+
+        if (this.props.project === undefined || this.props.category === null) {
             return null;
         }
 

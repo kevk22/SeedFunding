@@ -12,9 +12,6 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
     const personalGreeting = () => (
         <hgroup className="header-group">
-            {/* <h2 className="header-name">Hi, {currentUser.email}!</h2> */}
-            
-            {/* <button className="header-button" onClick={() => openModal('profile')}><img src="ben_frank.jpeg" className="ben-frank" /></button> */}
             <img src="ben_frank.jpeg" className="ben-frank" onClick={() => openModal('profile')} />
         </hgroup>
     );

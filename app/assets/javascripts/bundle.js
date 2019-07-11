@@ -530,7 +530,11 @@ function (_React$Component) {
         return null;
       }
 
-      if (this.props.projects === null || this.props.users === null) {
+      if (this.props.projects === null || this.props.users === undefined) {
+        return null;
+      }
+
+      if (this.props.projects === undefined || this.props.users === null) {
         return null;
       }
 
@@ -940,7 +944,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.project === null || this.props.category === null) {
+      if (this.props.project === null || this.props.category === undefined) {
+        return null;
+      }
+
+      if (this.props.project === undefined || this.props.category === null) {
         return null;
       }
 
