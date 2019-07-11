@@ -537,7 +537,42 @@ function (_React$Component) {
         className: "category-description"
       }, this.state.curCategory && this.state.curCategory.description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-product-text"
-      }, "Featured Project"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Featured Project"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "recommended-text"
+      }, "Recommended"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "recommended-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.state.curCategory.name + ".jpeg",
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-name"
+      }, this.props.projects && this.props.projects[this.props.catID].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-creator"
+      }, "By ", this.props.users && this.props.users[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "line-1"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.state.curCategory.name + ".jpeg",
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-name2"
+      }, this.props.projects && this.props.projects[this.props.catID].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-creator2"
+      }, "By ", this.props.users && this.props.users[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "line-2"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.state.curCategory.name + ".jpeg",
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-project-name3"
+      }, this.props.projects && this.props.projects[this.props.catID].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "rec-creator3"
+      }, "By ", this.props.users && this.props.users[this.props.catID].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-pic-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(this.props.catID)
