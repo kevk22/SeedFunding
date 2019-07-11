@@ -530,7 +530,10 @@ function (_React$Component) {
         return null;
       }
 
-      ;
+      if (this.props.projects === null || this.props.users === null) {
+        return null;
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "category-name"
       }, this.state.curCategory && this.state.curCategory.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -937,6 +940,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      if (this.props.project === null || this.props.category === null) {
+        return null;
+      }
+
       var expRuby = this.props.project.funding_expiration.split("-");
       var expYear = expRuby[0];
       var expMonth = expRuby[1];

@@ -12,6 +12,10 @@ export default class ProjectShow extends React.Component {
     }
 
     render() {
+        if (this.props.project === null || this.props.category === null) {
+            return null;
+        }
+
         const expRuby = this.props.project.funding_expiration.split("-");
         const expYear = expRuby[0];
         const expMonth = expRuby[1];

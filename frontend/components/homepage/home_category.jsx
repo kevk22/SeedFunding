@@ -19,8 +19,12 @@ export default class HomeCategory extends React.Component {
 
     render() {
         if(this.props.catID === null || this.state.curCategory === undefined) {
-            return null
-        };
+            return null;
+        }
+
+        if(this.props.projects === null || this.props.users === null) {
+            return null;
+        }
        
         return(
         <div>
