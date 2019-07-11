@@ -887,7 +887,10 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ProjectShow, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "stuff");
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.project.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.props.category.name + ".jpeg",
+        className: "featured-pic"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.project.description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.project.body));
     }
   }]);
 
@@ -911,25 +914,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ "./frontend/components/project/project.jsx");
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/project_actions */ "./frontend/actions/project_actions.js");
+/* harmony import */ var _actions_category_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/category_actions */ "./frontend/actions/category_actions.js");
 
 
 
 
-var mapStateToProps = function mapStateToProps(state) {// return {
-  //     users: state.entities.users,
-  //     projects: state.entities.projects,
-  //     categories: state.entities.categories
-  // };
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  var project = state.entities.projects[ownProps.match.params.project_id];
+  var category = state.entities.categories[ownProps.match.params.project_id];
+  return {
+    project: project,
+    category: category
+  };
 };
 
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {// return {
-  //     fetchProjects: () => dispatch(fetchProjects()),
-  //     fetchCategoryIndex: () => dispatch(fetchCategoryIndex()),
-  //     fetchUsers: () => dispatch(fetchUsers()),
-  // };
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchProject: function fetchProject(id) {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_3__["fetchProject"])(id));
+    },
+    fetchCategoryIndex: function fetchCategoryIndex() {
+      return dispatch(Object(_actions_category_actions__WEBPACK_IMPORTED_MODULE_4__["fetchCategoryIndex"])());
+    }
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(null, null)(_project__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_project__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
