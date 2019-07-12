@@ -8,7 +8,10 @@ export default class ProjectShow extends React.Component {
     }
 
     componentDidMount() {
-
+        this.props.fetchProject(this.props.match.params.project_id)
+        if (this.props.category === undefined) {
+            this.props.fetchCategoryIndex();
+        }
     }
 
     render() {

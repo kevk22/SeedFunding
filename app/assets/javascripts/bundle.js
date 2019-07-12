@@ -965,7 +965,13 @@ function (_React$Component) {
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ProjectShow, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      this.props.fetchProject(this.props.match.params.project_id);
+
+      if (this.props.category === undefined) {
+        this.props.fetchCategoryIndex();
+      }
+    }
   }, {
     key: "render",
     value: function render() {

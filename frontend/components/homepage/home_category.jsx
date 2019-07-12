@@ -26,12 +26,10 @@ export default class HomeCategory extends React.Component {
             return null;
         }
 
-        let curCategoryName = this.state.curCategory
+        let curCategoryName = this.state.curCategory;
 
         if (curCategoryName === undefined ) {
-            
             return null;
-
         }
         
 
