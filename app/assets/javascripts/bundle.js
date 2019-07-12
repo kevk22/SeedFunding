@@ -1001,6 +1001,16 @@ function (_React$Component) {
         src: this.props.category.name + ".jpeg",
         className: "project-pic"
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pledge-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pledge-header"
+      }, "Pledge $10 or more"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "reward"
+      }, "Receive 1st Batch"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "reward-description"
+      }, "Pledge $10 or more to receive the first batch of this project's reward."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "estimated-delivery"
+      }, "Estimated Delivery: ", diffDays + 40, " Days ")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "about"
       }, "About"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "project-body"

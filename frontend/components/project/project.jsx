@@ -57,10 +57,18 @@ export default class ProjectShow extends React.Component {
                 </div>
 
                     <br />
+                <div className="pledge-container">
+                    <div className="pledge-header">Pledge $10 or more</div>
+                    <br />
+                    <div className="reward">Receive 1st Batch</div>
+                    <div className="reward-description">Pledge $10 or more to receive the first batch of this project's reward.</div>
+                    <div className="estimated-delivery">Estimated Delivery: {diffDays + 40} Days </div>
+                </div>
                 <div className="about">About</div>
                 <div className="project-body">
                     {this.props.project.body}
                 </div>
+                
             </div>
         )
     }
