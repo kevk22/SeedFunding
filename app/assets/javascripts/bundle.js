@@ -526,16 +526,28 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.catID === null || this.state.curCategory === undefined) {
+      if (this.props.catID === null || this.state.curCategory === null) {
         return null;
       }
 
-      if (this.props.projects === null || this.props.users === undefined) {
+      if (this.props.projects === null || this.props.users === null) {
         return null;
       }
 
-      if (this.props.projects === undefined || this.props.users === null) {
+      var curCategoryName = this.state.curCategory;
+
+      if (curCategoryName === undefined) {
         return null;
+      } //Array of all project objects 
+
+
+      var projArray = Object.values(this.props.projects);
+      var filteredProjs = [];
+
+      for (var i = 0; i < projArray.length; i++) {
+        if (this.props.catID === projArray[i].category_id) {
+          filteredProjs.push(projArray[i]);
+        }
       }
 
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
@@ -553,7 +565,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(this.props.catID)
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + ".jpeg",
+        src: this.state.curCategory.name + "1.jpeg",
         className: "recommended-pic"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name"
@@ -568,7 +580,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(this.props.catID)
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + ".jpeg",
+        src: this.state.curCategory.name + "2.jpeg",
         className: "recommended-pic"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name2"
@@ -583,7 +595,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(this.props.catID)
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + ".jpeg",
+        src: this.state.curCategory.name + "3.jpeg",
         className: "recommended-pic"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name3"
@@ -782,7 +794,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchUsers: function fetchUsers() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["fetchUsers"])());
-    }
+    } // fetchCategoryProjects: (id) => dispatch(fetchCategoryProjects(id))
+
   };
 };
 

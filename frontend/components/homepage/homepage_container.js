@@ -10,6 +10,7 @@ const mapStateToProps = state => {
         users: state.entities.users,
         projects: state.entities.projects,
         categories: state.entities.categories
+        
     };
 };
 
@@ -18,6 +19,7 @@ const mapDispatchToProps = dispatch => {
         fetchProjects: () => dispatch(fetchProjects()),
         fetchCategoryIndex: () => dispatch(fetchCategoryIndex()),
         fetchUsers: () => dispatch(fetchUsers()),
+        // fetchCategoryProjects: (id) => dispatch(fetchCategoryProjects(id))
     };
 };
 

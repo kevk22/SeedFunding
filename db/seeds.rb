@@ -74,3 +74,156 @@ project8 = Project.create!(name: "Scary Potter", description: "The other side of
     As of February 2018, the books have sold more than 500 million copies worldwide, making them the best-selling book series in history, and have been translated into eighty languages. The last four books consecutively set records as the fastest-selling books in history, with the final installment selling roughly eleven million copies in the United States within twenty-four hours of its release.
 ", funding_expiration: Date.new(2029, 6, 26), funding_goal: 10000000, user_id: user8.id, category_id: category8.id) 
 
+
+
+project9 = Project.create!(name: "Kadinsky", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user2.id, category_id: category1.id) 
+project10 = Project.create!(name: "Futura", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user3.id, category_id: category1.id) 
+project11 = Project.create!(name: "Murakami", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user4.id, category_id: category1.id) 
+
+project12 = Project.create!(name: "Watchmen", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user5.id, category_id: category2.id) 
+project13 = Project.create!(name: "Spiderman", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user6.id, category_id: category2.id) 
+project14 = Project.create!(name: "Venom", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user7.id, category_id: category2.id) 
+
+project15 = Project.create!(name: "Magic Keyboard", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user8.id, category_id: category3.id) 
+project16 = Project.create!(name: "Space Room", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user1.id, category_id: category3.id) 
+project17 = Project.create!(name: "Frequency Optimizer", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user2.id, category_id: category3.id) 
+
+project18 = Project.create!(name: "Ocean's 11", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user3.id, category_id: category4.id) 
+project19 = Project.create!(name: "Matrix 10.0", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user4.id, category_id: category4.id) 
+project20 = Project.create!(name: "Joker", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user5.id, category_id: category4.id) 
+
+project21 = Project.create!(name: "Brain Boosting Smoothies", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user6.id, category_id: category5.id) 
+project22 = Project.create!(name: "EZ Dine", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user7.id, category_id: category5.id) 
+project23 = Project.create!(name: "Korean BBQ", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user8.id, category_id: category5.id) 
+
+project24 = Project.create!(name: "Cuphead", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user1.id, category_id: category6.id) 
+project25 = Project.create!(name: "Rocket League", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user2.id, category_id: category6.id) 
+project26 = Project.create!(name: "Metal Gear Solid", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user3.id, category_id: category6.id) 
+
+project27 = Project.create!(name: "Adam Beyer", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user4.id, category_id: category7.id) 
+project28 = Project.create!(name: "Luttrell", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user5.id, category_id: category7.id) 
+project29 = Project.create!(name: "Metal Gear Solid", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user6.id, category_id: category7.id) 
+
+project30 = Project.create!(name: "Obstacle is the Way", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user7.id, category_id: category8.id) 
+project31 = Project.create!(name: "Zero to One", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influential American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user8.id, category_id: category8.id) 
+project32 = Project.create!(name: "Ubik", description: "Unique artwork showcasing Basquiat's signature style", body: "Jean-Michel Basquiat; December 22, 1960 – August 12, 1988
+    was an influetial American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo
+    who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street 
+    art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums
+    internationally. The Whitney Museum of American Art held a retrospective of his art in 1992.", funding_expiration: Date.new(2020, 1, 1), funding_goal: 1000000,
+    user_id: user1.id, category_id: category8.id) 

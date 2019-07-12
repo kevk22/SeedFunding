@@ -20,7 +20,7 @@ export default class Homepage extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.categories !== this.props.categories) {
-            this.setState ({curCategoryID: Object.keys(this.props.categories).sort( (a,b) => (parseInt(a) < parseInt(b)))[0]})
+            this.setState ({curCategoryID: Object.keys(this.props.categories).sort( (a,b) => (parseInt(a) < parseInt(b)))[0]})   
         }
     }
 
@@ -41,6 +41,8 @@ export default class Homepage extends React.Component {
                 > {category.name} </div>
             )
         });
+
+        
       
         return(
             

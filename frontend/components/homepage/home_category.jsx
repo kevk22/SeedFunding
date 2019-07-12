@@ -7,8 +7,7 @@ export default class HomeCategory extends React.Component {
 
         this.state = {
             curCategory: this.props.categories[this.props.catID]
-        }
-
+        };
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -18,17 +17,35 @@ export default class HomeCategory extends React.Component {
     }
 
     render() {
-        if(this.props.catID === null || this.state.curCategory === undefined) {
+
+        if(this.props.catID === null || this.state.curCategory === null) {
             return null;
         }
 
-        if(this.props.projects === null || this.props.users === undefined) {
+        if(this.props.projects === null || this.props.users === null) {
             return null;
         }
 
-        if(this.props.projects === undefined || this.props.users === null) {
+        let curCategoryName = this.state.curCategory
+
+        if (curCategoryName === undefined ) {
+            
             return null;
+
         }
+        
+
+        //Array of all project objects 
+        let projArray = Object.values(this.props.projects);
+        
+        let filteredProjs = [];
+        for (let i = 0; i < projArray.length; i++) {
+            
+            if (this.props.catID === projArray[i].category_id) {                
+                filteredProjs.push(projArray[i]);
+            }
+        }
+        
        
         return(
         <div>
@@ -39,28 +56,32 @@ export default class HomeCategory extends React.Component {
             <div className="featured-product-text">Featured Project</div>
             <div className="recommended-text">Recommended</div>
                 <br />
+
                 <div className="recommended-container">
                     <div className="rec-project-container"> 
                         <Link to={`/projects/${this.props.catID}`}>
-                        <img src={this.state.curCategory.name + ".jpeg"} className="recommended-pic" />
+                        <img src={this.state.curCategory.name + "1.jpeg"} className="recommended-pic" />
                         <div className="rec-project-name">{this.props.projects && this.props.projects[this.props.catID].name}</div>
+                            {/* <div className="rec-project-name">{this.props.projects && filteredProjs[1].name}</div> */}
                         </Link>
                         <div className="percent-funded">0% Funded</div>
                         <div className="rec-creator">By {this.props.users && this.props.users[this.props.catID].name}</div>
                     </div>
+
                     <div className="line-1"></div>
                     <div className="rec-project-container"> 
                         <Link to={`/projects/${this.props.catID}`}>
-                        <img src={this.state.curCategory.name + ".jpeg"} className="recommended-pic" />
+                        <img src={this.state.curCategory.name + "2.jpeg"} className="recommended-pic" />
                         <div className="rec-project-name2">{this.props.projects && this.props.projects[this.props.catID].name}</div>
                         </Link>
                         <div className="percent-funded">0% Funded</div>
                         <div className="rec-creator2">By {this.props.users && this.props.users[this.props.catID].name}</div>
                     </div>
+
                     <div className="line-2"></div>
                     <div className="rec-project-container"> 
                         <Link to={`/projects/${this.props.catID}`}>
-                        <img src={this.state.curCategory.name + ".jpeg"} className="recommended-pic" />
+                        <img src={this.state.curCategory.name + "3.jpeg"} className="recommended-pic" />
                         <div className="rec-project-name3">{this.props.projects && this.props.projects[this.props.catID].name}</div>
                         </Link>
                         <div className="percent-funded">0% Funded</div>
