@@ -1,12 +1,31 @@
-# README
+# [SeedFunding](https://seedcapital.herokuapp.com/#/) 
 
-SeedFunding is a crowdsourcing platform inspired by Kickstarter that brings your ideas to the marketplace. 
 
-The platform allows users to:
+SeedFunding is a crowdsourcing platform that helps bring your ideas to the marketplace.
 
-1. Create a new project 
 
-2. Help fund an existing project via pledges
+## Features
+___
 
-3. Reward different pledgers based 
+* Frontend to backend user authentication 
+
+* Create a new project that can be funded by users
+
+* Help fund an existing project via pledges
+
+* Reward different funders based on different pledge tiers
+
+* Update existing projects with new information
+
+* Delete existing projects that will no longer be pursued 
+
+
+
+## Technologies
+---
+
+* Backend: Ruby on Rails + PostgreSQL
+
+* Frontend: React + Redux 
+
 ...

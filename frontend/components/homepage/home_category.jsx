@@ -62,7 +62,7 @@ export default class HomeCategory extends React.Component {
                         <Link to={`/projects/${this.props.catID}`}>
                         <img src={this.state.curCategory.name + "1.jpeg"} className="recommended-pic" />
                         <div className="rec-project-name">{this.props.projects && this.props.projects[this.props.catID].name}</div>
-                            {/* <div className="rec-project-name">{this.props.projects && filteredProjs[1].name}</div> */}
+                            {/* <div className="rec-project-name">{this.props.projects && filteredProjs[0].name}</div> */}
                         </Link>
                         <div className="percent-funded">0% Funded</div>
                         <div className="rec-creator">By {this.props.users && this.props.users[this.props.catID].name}</div>
