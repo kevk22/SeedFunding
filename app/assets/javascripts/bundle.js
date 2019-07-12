@@ -718,7 +718,19 @@ function (_React$Component) {
         projects: this.props.projects,
         categories: this.props.categories,
         catID: this.state.curCategoryID
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "footer-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.linkedin.com/in/kevin-kumar/"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: "linkedin.jpeg",
+        className: "footer-pic-linkedin"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://github.com/kevk22"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: "git.jpeg",
+        className: "footer-pic-git"
+      })))));
     }
   }]);
 

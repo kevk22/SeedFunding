@@ -259,3 +259,29 @@
     top: 50px;
     font-size: 12px;
 }
+
+.footer-container {
+    height: 50px; 
+    width: 90px;
+    /* display: flex; */
+    /* border: 1px solid red; */
+    justify-content: center;
+    position: absolute;
+    right: 155px;
+    padding-bottom: 20px;
+}
+
+.footer-pic-linkedin {
+    height: 35px; 
+    width: 35px;
+    padding-right: 10px;
+    padding-top: 7px;
+}
+
+.footer-pic-git {
+    height: 35px; 
+    width: 35px;
+    background-color: white;
+    padding-top: 7px;
+}
+

@@ -51,6 +51,16 @@ export default class Homepage extends React.Component {
 
             <HomeCategory users={this.props.users} projects={this.props.projects} categories={this.props.categories} 
                           catID={this.state.curCategoryID}  />
+            <footer>
+                <div className="footer-container">
+                    <a href="https://www.linkedin.com/in/kevin-kumar/">
+                        <img src={"linkedin.jpeg"} className="footer-pic-linkedin" />
+                    </a>
+                    <a href="https://github.com/kevk22">
+                        <img src={"git.jpeg"} className="footer-pic-git" />
+                    </a>
+                </div>
+            </footer>
         </div>
         )
     }
