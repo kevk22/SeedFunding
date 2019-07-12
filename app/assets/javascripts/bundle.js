@@ -550,6 +550,8 @@ function (_React$Component) {
         }
       }
 
+      console.log("category");
+      console.log(this.state.curCategory);
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "category-name"
       }, this.state.curCategory && this.state.curCategory.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {

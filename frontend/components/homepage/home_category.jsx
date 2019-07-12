@@ -44,7 +44,9 @@ export default class HomeCategory extends React.Component {
             }
         }
         
-       
+       console.log("category")
+       console.log(this.state.curCategory)
+
         return(
         <div>
             <h3 className="category-name">{this.state.curCategory && this.state.curCategory.name}</h3>
