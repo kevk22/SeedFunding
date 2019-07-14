@@ -561,6 +561,8 @@ function (_React$Component) {
       }, "Featured Project"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "recommended-text"
       }, "Recommended"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "outer-container"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "recommended-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-container"
@@ -618,7 +620,7 @@ function (_React$Component) {
         className: "featured-description"
       }, this.props.projects && this.props.projects[this.props.catID].description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-creator"
-      }, "By ", this.props.users && this.props.users[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
+      }, "By ", this.props.users && this.props.users[this.props.catID].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
     }
   }]);
 

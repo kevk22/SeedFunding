@@ -57,6 +57,7 @@ export default class HomeCategory extends React.Component {
             <div className="recommended-text">Recommended</div>
                 <br />
 
+                <div className="outer-container">
                 <div className="recommended-container">
                     <div className="rec-project-container"> 
                         <Link to={`/projects/${this.props.catID}`}>
@@ -109,6 +110,8 @@ export default class HomeCategory extends React.Component {
                     </div>
 
             </div>
+
+                </div>
                 <br/>
            
         </div>
