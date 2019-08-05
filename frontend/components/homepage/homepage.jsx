@@ -16,6 +16,7 @@ export default class Homepage extends React.Component {
         this.props.fetchProjects();
         this.props.fetchCategoryIndex();
         this.props.fetchUsers();
+        // this.props.fetchCategoryProject(curCategoryID);
     }
 
     componentDidUpdate(prevProps) {
@@ -34,6 +35,11 @@ export default class Homepage extends React.Component {
         if (Object.values(this.props.users).length === 0) {
             return null;
         } 
+
+        if (this.state.curCategoryID === null) {
+            this.setState({ curCategoryID: 65 });
+        }
+
         let category = Object.values(this.props.categories).map(category => {
             return(
                 <div className="category-button" key={category.id} 
@@ -43,9 +49,7 @@ export default class Homepage extends React.Component {
         });
 
         
-      
-        return(
-            
+        return(          
         <div>
             <ul className="category-nav">
                 {category}

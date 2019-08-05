@@ -15,12 +15,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
+    return ({
         fetchProjects: () => dispatch(fetchProjects()),
         fetchCategoryIndex: () => dispatch(fetchCategoryIndex()),
         fetchUsers: () => dispatch(fetchUsers()),
-        // fetchCategoryProjects: (id) => dispatch(fetchCategoryProjects(id))
-    };
+        fetchCategoryProjects: (id) => dispatch(fetchCategoryProjects(id))
+    });
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

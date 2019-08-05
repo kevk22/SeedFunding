@@ -8,21 +8,16 @@ export default class ProjectShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchProject(this.props.match.params.project_id)
-        if (this.props.category === undefined) {
-            this.props.fetchCategoryIndex();
-        }
+        this.props.fetchProject(this.props.match.params.project_id);
     }
 
     render() {
-        if (this.props.project === null || this.props.category === undefined) {
+       
+        if (this.props.project === undefined || this.props.project === null) {
             return null;
         }
 
-        if (this.props.project === undefined || this.props.category === null) {
-            return null;
-        }
-
+        //Convert Ruby date object to JavaScript date object 
         const expRuby = this.props.project.funding_expiration.split("-");
         const expYear = expRuby[0];
         const expMonth = expRuby[1];
@@ -43,7 +38,6 @@ export default class ProjectShow extends React.Component {
                 </div>
 
                     <br/>
-
                 <div>
                     <div className="goal-container">
                         <div className="funding_goal">{"$" + new Intl.NumberFormat().format(this.props.project.funding_goal)}</div>
@@ -56,7 +50,7 @@ export default class ProjectShow extends React.Component {
 
                         <button className="back-this-button">Back This Project</button>
                     </div>
-                    <img src={this.props.category.name + ".jpeg"} className="project-pic" />
+                    {/* <img src={this.props.category.name + ".jpeg"} className="project-pic" /> */}
                 </div>
 
                     <br />

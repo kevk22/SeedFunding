@@ -168,7 +168,7 @@ var closeModal = function closeModal() {
 /*!*********************************************!*\
   !*** ./frontend/actions/project_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_PROJECTS, RECEIVE_PROJECT, fetchProjects, fetchProject */
+/*! exports provided: RECEIVE_PROJECTS, RECEIVE_PROJECT, fetchProjects, fetchProject, createProject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -177,6 +177,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PROJECT", function() { return RECEIVE_PROJECT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProject", function() { return fetchProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createProject", function() { return createProject; });
 /* harmony import */ var _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/project_api_util */ "./frontend/util/project_api_util.js");
 
 var RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
@@ -206,6 +207,13 @@ var fetchProjects = function fetchProjects() {
 var fetchProject = function fetchProject(id) {
   return function (dispatch) {
     return _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchProject"](id).then(function (project) {
+      return dispatch(receiveProject(project));
+    });
+  };
+};
+var createProject = function createProject(project) {
+  return function (dispatch) {
+    return _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__["createProject"](project).then(function (project) {
       return dispatch(receiveProject(project));
     });
   };
@@ -326,7 +334,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 /* harmony import */ var _homepage_homepage_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./homepage/homepage_container */ "./frontend/components/homepage/homepage_container.js");
 /* harmony import */ var _project_project_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/project_container */ "./frontend/components/project/project_container.js");
-/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+/* harmony import */ var _project_form_project_form_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./project_form/project_form_container */ "./frontend/components/project_form/project_form_container.js");
+/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+
 
 
 
@@ -350,18 +360,22 @@ var App = function App() {
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     path: "/projects/:project_id",
     component: _project_project_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_10__["AuthRoute"], {
+    exact: true,
+    path: "/login",
+    component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_10__["AuthRoute"], {
+    exact: true,
+    path: "/signup",
+    component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_10__["ProtectedRoute"], {
+    exact: true,
+    path: "/projects/new",
+    component: _project_form_project_form_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     exact: true,
     path: "/",
     component: _homepage_homepage_container__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_9__["AuthRoute"], {
-    exact: true,
-    path: "/login",
-    component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_9__["AuthRoute"], {
-    exact: true,
-    path: "/signup",
-    component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "footer"
   }));
@@ -383,8 +397,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-var _this = undefined;
-
 
 
 
@@ -392,7 +404,6 @@ var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       logout = _ref.logout,
       openModal = _ref.openModal;
-  var that = _this;
 
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -515,6 +526,10 @@ function (_React$Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HomeCategory, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {// fetch all categories by passed down cat id 
+    }
+  }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (this.props.catID !== prevProps.catID) {
@@ -532,24 +547,21 @@ function (_React$Component) {
 
       if (this.props.projects === null || this.props.users === null) {
         return null;
-      }
-
-      var curCategoryName = this.state.curCategory;
-
-      if (curCategoryName === undefined) {
-        return null;
       } //Array of all project objects 
 
 
       var projArray = Object.values(this.props.projects);
+      console.log(projArray);
       var filteredProjs = [];
 
       for (var i = 0; i < projArray.length; i++) {
-        if (this.props.catID === projArray[i].category_id) {
+        if (Number(this.props.catID) === projArray[i].category_id) {
           filteredProjs.push(projArray[i]);
         }
       }
 
+      if (filteredProjs.length === 0) return null;
+      console.log(filteredProjs);
       console.log("category");
       console.log(this.state.curCategory);
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
@@ -567,54 +579,42 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-        to: "/projects/".concat(this.props.catID)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + "1.jpeg",
-        className: "recommended-pic"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        to: "/projects/".concat(filteredProjs[1].id)
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name"
-      }, this.props.projects && this.props.projects[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, this.props.projects && filteredProjs[1].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
       }, "0% Funded"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-creator"
-      }, "By ", this.props.users && this.props.users[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "By ", this.props.users && this.props.users[filteredProjs[1].user_id].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "line-1"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-        to: "/projects/".concat(this.props.catID)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + "2.jpeg",
-        className: "recommended-pic"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        to: "/projects/".concat(filteredProjs[2].id)
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name2"
-      }, this.props.projects && this.props.projects[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, this.props.projects && filteredProjs[2].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
       }, "0% Funded"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-creator2"
-      }, "By ", this.props.users && this.props.users[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "By ", this.props.users && this.props.users[filteredProjs[2].user_id].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "line-2"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-        to: "/projects/".concat(this.props.catID)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + "3.jpeg",
-        className: "recommended-pic"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        to: "/projects/".concat(filteredProjs[3].id)
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name3"
-      }, this.props.projects && this.props.projects[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, this.props.projects && filteredProjs[3].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
       }, "0% Funded"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-creator3"
-      }, "By ", this.props.users && this.props.users[this.props.catID].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "By ", this.props.users && this.props.users[filteredProjs[3].user_id].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-pic-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(this.props.catID)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.state.curCategory.name + ".jpeg",
-        className: "featured-pic"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-name"
       }, this.props.projects && this.props.projects[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-description"
@@ -686,7 +686,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.props.fetchProjects();
       this.props.fetchCategoryIndex();
-      this.props.fetchUsers();
+      this.props.fetchUsers(); // this.props.fetchCategoryProject(curCategoryID);
     }
   }, {
     key: "componentDidUpdate",
@@ -714,6 +714,12 @@ function (_React$Component) {
 
       if (Object.values(this.props.users).length === 0) {
         return null;
+      }
+
+      if (this.state.curCategoryID === null) {
+        this.setState({
+          curCategoryID: 65
+        });
       }
 
       var category = Object.values(this.props.categories).map(function (category) {
@@ -798,8 +804,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchUsers: function fetchUsers() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["fetchUsers"])());
-    } // fetchCategoryProjects: (id) => dispatch(fetchCategoryProjects(id))
-
+    },
+    fetchCategoryProjects: function fetchCategoryProjects(id) {
+      return dispatch(Object(_actions_category_actions__WEBPACK_IMPORTED_MODULE_4__["fetchCategoryProjects"])(id));
+    }
   };
 };
 
@@ -971,21 +979,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchProject(this.props.match.params.project_id);
-
-      if (this.props.category === undefined) {
-        this.props.fetchCategoryIndex();
-      }
     }
   }, {
     key: "render",
     value: function render() {
-      if (this.props.project === null || this.props.category === undefined) {
+      if (this.props.project === undefined || this.props.project === null) {
         return null;
-      }
+      } //Convert Ruby date object to JavaScript date object 
 
-      if (this.props.project === undefined || this.props.category === null) {
-        return null;
-      }
 
       var expRuby = this.props.project.funding_expiration.split("-");
       var expYear = expRuby[0];
@@ -1020,10 +1021,7 @@ function (_React$Component) {
         className: "all-or-none"
       }, "All or nothing. This project will only be funded if it reaches its goal in ", diffDays, " days."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "back-this-button"
-      }, "Back This Project")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: this.props.category.name + ".jpeg",
-        className: "project-pic"
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Back This Project"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pledge-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pledge-header"
@@ -1090,6 +1088,105 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_project__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/project_form/project_form.jsx":
+/*!***********************************************************!*\
+  !*** ./frontend/components/project_form/project_form.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectForm; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+var ProjectForm =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(ProjectForm, _React$Component);
+
+  function ProjectForm(props) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ProjectForm);
+
+    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProjectForm).call(this, props));
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ProjectForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchCategoryIndex();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.props.categories.length === 0) return null;
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "stuff");
+    }
+  }]);
+
+  return ProjectForm;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./frontend/components/project_form/project_form_container.js":
+/*!********************************************************************!*\
+  !*** ./frontend/components/project_form/project_form_container.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/project_actions */ "./frontend/actions/project_actions.js");
+/* harmony import */ var _actions_category_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/category_actions */ "./frontend/actions/category_actions.js");
+/* harmony import */ var _project_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project_form */ "./frontend/components/project_form/project_form.jsx");
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    categories: Object.values(state.entities.categories)
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    createProject: function createProject(project) {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_1__["createProject"])(project));
+    },
+    fetchCategoryIndex: function fetchCategoryIndex() {
+      return dispatch(Object(_actions_category_actions__WEBPACK_IMPORTED_MODULE_2__["fetchCategoryIndex"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_project_form__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -2045,13 +2142,14 @@ var fetchCategoryProjects = function fetchCategoryProjects(id) {
 /*!*******************************************!*\
   !*** ./frontend/util/project_api_util.js ***!
   \*******************************************/
-/*! exports provided: fetchProjects, fetchProject */
+/*! exports provided: fetchProjects, fetchProject, createProject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProject", function() { return fetchProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createProject", function() { return createProject; });
 var fetchProjects = function fetchProjects() {
   return $.ajax({
     method: "GET",
@@ -2062,6 +2160,13 @@ var fetchProject = function fetchProject(id) {
   return $.ajax({
     method: "GET",
     url: "api/projects/".concat(id)
+  });
+};
+var createProject = function createProject(projectForm) {
+  return $.ajax({
+    method: "POST",
+    url: 'api/projects',
+    data: projectForm
   });
 };
 
@@ -4480,8 +4585,8 @@ function baseMerge(object, source, srcIndex, customizer, stack) {
     return;
   }
   baseFor(source, function(srcValue, key) {
+    stack || (stack = new Stack);
     if (isObject(srcValue)) {
-      stack || (stack = new Stack);
       baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
     }
     else {
@@ -6092,7 +6197,7 @@ module.exports = root;
 /***/ (function(module, exports) {
 
 /**
- * Gets the value at `key`, unless `key` is "__proto__".
+ * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
  *
  * @private
  * @param {Object} object The object to query.
@@ -6100,6 +6205,10 @@ module.exports = root;
  * @returns {*} Returns the property value.
  */
 function safeGet(object, key) {
+  if (key === 'constructor' && typeof object[key] === 'function') {
+    return;
+  }
+
   if (key == '__proto__') {
     return;
   }

@@ -4,6 +4,7 @@ import { RECEIVE_CURRENT_USER, RECEIVE_ALL_USERS } from '../actions/session_acti
 
 const usersReducer = (state = {}, action) => {
     Object.freeze(state);
+    
     switch (action.type) {
         case RECEIVE_ALL_USERS:
             return action.payload.users;

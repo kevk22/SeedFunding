@@ -12,7 +12,13 @@ export const fetchProject = id => (
     })
 );
 
-
+export const createProject = projectForm => (
+    $.ajax({
+        method: "POST",
+        url: 'api/projects',
+        data: projectForm
+    })
+);
 
 
 

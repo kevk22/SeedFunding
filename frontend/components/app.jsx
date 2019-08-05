@@ -14,6 +14,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import HomepageContainer from './homepage/homepage_container'
 import ProjectContainer from './project/project_container';
+import ProjectFormContainer from './project_form/project_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -28,9 +29,10 @@ const App = () => (
         </div>
 
         <Route path="/projects/:project_id" component={ProjectContainer} />
-        <Route exact path="/" component={HomepageContainer}/>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        <ProtectedRoute exact path="/projects/new" component={ProjectFormContainer} />
+        <Route exact path="/" component={HomepageContainer}/>
 
         <footer className="footer">
 

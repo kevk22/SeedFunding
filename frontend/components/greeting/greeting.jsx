@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
-    let that = this;
 
     const sessionLinks = () => (
         <nav className="login-signup">
             <Link to="/login" className="signin-header">Sign in</Link>
         </nav>
+        
     );
 
     const personalGreeting = () => (
