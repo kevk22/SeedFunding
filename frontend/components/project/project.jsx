@@ -26,8 +26,8 @@ export default class ProjectShow extends React.Component {
         const expDate = new Date(expYear, expMonth, 1);
         
         var oneDay = 24 * 60 * 60 * 1000;
-        var diffDays = Math.round(Math.abs((expDate.getTime() - curDate.getTime()) / (oneDay)));        
-        
+        var diffDays = Math.round(Math.abs((expDate.getTime() - curDate.getTime()) / (oneDay)));   
+             
         return(
             <div>
                 <div className="project-header-container">
@@ -51,6 +51,7 @@ export default class ProjectShow extends React.Component {
                         <button className="back-this-button">Back This Project</button>
                     </div>
                     {/* <img src={this.props.category.name + ".jpeg"} className="project-pic" /> */}
+                    <img src={this.props.project.photoUrl} className="project-pic" />
                 </div>
 
                     <br />

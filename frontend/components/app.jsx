@@ -21,6 +21,7 @@ const App = () => (
     <div>
         <Modal />
         <div className="nav">
+            
             <Link to="/" className="header-link">
                 <img src="logo.png" className="logo" />
             </Link>
@@ -34,9 +35,7 @@ const App = () => (
         <ProtectedRoute exact path="/projects/new" component={ProjectFormContainer} />
         <Route exact path="/" component={HomepageContainer}/>
 
-        <footer className="footer">
-
-        </footer>
+        <footer className="footer"> </footer>
     </div>
 );
 

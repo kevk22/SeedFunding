@@ -46,9 +46,7 @@ export default class HomeCategory extends React.Component {
         
         if (filteredProjs.length === 0) return null;
         
-        console.log(filteredProjs);
-        console.log("category");
-        console.log(this.state.curCategory);
+
 
         return(
         <div>
@@ -65,7 +63,7 @@ export default class HomeCategory extends React.Component {
                 <div className="recommended-container">
                     <div className="rec-project-container"> 
                             <Link to={`/projects/${filteredProjs[1].id}`}>
-                        {/* <img src={this.state.curCategory.name + "1.jpeg"} className="recommended-pic" /> */}
+                                <img src={filteredProjs[1].photoUrl} className="recommended-pic" />
                         <div className="rec-project-name">{this.props.projects && filteredProjs[1].name}</div>
                         </Link>
                         <div className="percent-funded">0% Funded</div>
@@ -76,6 +74,7 @@ export default class HomeCategory extends React.Component {
                     <div className="rec-project-container"> 
                             <Link to={`/projects/${filteredProjs[2].id}`}>
                         {/* <img src={this.state.curCategory.name + "2.jpeg"} className="recommended-pic" /> */}
+                                <img src={filteredProjs[2].photoUrl} className="recommended-pic" />
                                 <div className="rec-project-name2">{this.props.projects && filteredProjs[2].name}</div>
                         </Link>
                         <div className="percent-funded">0% Funded</div>
@@ -86,6 +85,7 @@ export default class HomeCategory extends React.Component {
                     <div className="rec-project-container"> 
                             <Link to={`/projects/${filteredProjs[3].id}`}>
                         {/* <img src={this.state.curCategory.name + "3.jpeg"} className="recommended-pic" /> */}
+                                <img src={filteredProjs[3].photoUrl} className="recommended-pic" />
                                 <div className="rec-project-name3">{this.props.projects && filteredProjs[3].name}</div>
                         </Link>
                         <div className="percent-funded">0% Funded</div>
@@ -95,16 +95,18 @@ export default class HomeCategory extends React.Component {
                 
                 
             <div className="featured-pic-container">
-                    <Link to={`/projects/${this.props.catID}`}>
+                        <Link to={`/projects/${filteredProjs[0].id}`}>
+                            {/* <img src={filteredProjs[0].photoUrl} className="recommended-pic" /> */}
+                            <img src={filteredProjs[0].photoUrl} className="featured-pic" />
                     {/* <img src={this.state.curCategory.name + ".jpeg"} className="featured-pic" /> */}
                     <div className="featured-name">
-                        {this.props.projects && this.props.projects[this.props.catID].name}
+                                {this.props.projects && filteredProjs[0].name}
                     </div>
                     </Link>
                     <br />
 
                     <div className="featured-description">
-                        {this.props.projects && this.props.projects[this.props.catID].description}
+                            {this.props.projects && filteredProjs[0].description}
                     </div>
                     <br />
 

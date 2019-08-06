@@ -378,7 +378,7 @@ var App = function App() {
     component: _homepage_homepage_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "footer"
-  }));
+  }, " "));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -561,9 +561,6 @@ function (_React$Component) {
       }
 
       if (filteredProjs.length === 0) return null;
-      console.log(filteredProjs);
-      console.log("category");
-      console.log(this.state.curCategory);
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "category-name"
       }, this.state.curCategory && this.state.curCategory.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -580,7 +577,10 @@ function (_React$Component) {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(filteredProjs[1].id)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: filteredProjs[1].photoUrl,
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name"
       }, this.props.projects && filteredProjs[1].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
@@ -592,7 +592,10 @@ function (_React$Component) {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(filteredProjs[2].id)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: filteredProjs[2].photoUrl,
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name2"
       }, this.props.projects && filteredProjs[2].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
@@ -604,7 +607,10 @@ function (_React$Component) {
         className: "rec-project-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/projects/".concat(filteredProjs[3].id)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: filteredProjs[3].photoUrl,
+        className: "recommended-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "rec-project-name3"
       }, this.props.projects && filteredProjs[3].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "percent-funded"
@@ -613,12 +619,15 @@ function (_React$Component) {
       }, "By ", this.props.users && this.props.users[filteredProjs[3].user_id].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-pic-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-        to: "/projects/".concat(this.props.catID)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        to: "/projects/".concat(filteredProjs[0].id)
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: filteredProjs[0].photoUrl,
+        className: "featured-pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-name"
-      }, this.props.projects && this.props.projects[this.props.catID].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, this.props.projects && filteredProjs[0].name)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-description"
-      }, this.props.projects && this.props.projects[this.props.catID].description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, this.props.projects && filteredProjs[0].description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "featured-creator"
       }, "By ", this.props.users && this.props.users[this.props.catID].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
     }
@@ -714,12 +723,6 @@ function (_React$Component) {
 
       if (Object.values(this.props.users).length === 0) {
         return null;
-      }
-
-      if (this.state.curCategoryID === null) {
-        this.setState({
-          curCategoryID: 65
-        });
       }
 
       var category = Object.values(this.props.categories).map(function (category) {
@@ -1021,7 +1024,10 @@ function (_React$Component) {
         className: "all-or-none"
       }, "All or nothing. This project will only be funded if it reaches its goal in ", diffDays, " days."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "back-this-button"
-      }, "Back This Project"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Back This Project")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: this.props.project.photoUrl,
+        className: "project-pic"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pledge-container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pledge-header"
@@ -1126,9 +1132,16 @@ function (_React$Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(ProjectForm, _React$Component);
 
   function ProjectForm(props) {
+    var _this;
+
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ProjectForm);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProjectForm).call(this, props));
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProjectForm).call(this, props));
+    _this.state = {
+      category: null,
+      description: null
+    };
+    return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ProjectForm, [{
@@ -1137,10 +1150,48 @@ function (_React$Component) {
       this.props.fetchCategoryIndex();
     }
   }, {
+    key: "myFunction",
+    value: function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+  }, {
     key: "render",
     value: function render() {
       if (this.props.categories.length === 0) return null;
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "stuff");
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        className: "project-form"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Pick a project category to connect with a specific community. You can always update this later."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "dropdown-content",
+        id: "myDropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[0].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[1].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[2].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[3].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[4].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[5].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[6].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, this.props.categories[7].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Describe what you\u2019ll be creating."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
+        className: "textbox-desc",
+        maxLength: "135",
+        rows: "3",
+        placeholder: "Please enter a 135 character description"
+      })));
     }
   }]);
 
@@ -2166,7 +2217,9 @@ var createProject = function createProject(projectForm) {
   return $.ajax({
     method: "POST",
     url: 'api/projects',
-    data: projectForm
+    data: projectForm,
+    contentType: false,
+    processData: false
   });
 };
 

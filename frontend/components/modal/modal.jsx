@@ -32,7 +32,6 @@ class Modal extends React.Component {
         return (
             <div className="modal-background" onClick={this.props.closeModal}>
                 <div className="modal-child" onClick={e => e.stopPropagation()}>
-                    {/* {component} */}
                     <button className="header-button" onClick={this.handleSubmit}>Logout</button>
                 </div>
             </div>

@@ -6,7 +6,7 @@ class Project < ApplicationRecord
     belongs_to :user
     belongs_to :category 
     
-    has_one_attached :image
+    has_one_attached :photo
 
     has_many :rewards
     has_many :pledges

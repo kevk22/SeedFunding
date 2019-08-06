@@ -16,7 +16,9 @@ export const createProject = projectForm => (
     $.ajax({
         method: "POST",
         url: 'api/projects',
-        data: projectForm
+        data: projectForm,
+        contentType: false,
+        processData: false
     })
 );
 
