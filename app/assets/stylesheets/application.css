@@ -26,9 +26,9 @@ html {
     width: 100%;
     justify-content: space-between;
     border-color: #E8E8E8;
-    // border-bottom: 0.1rem solid #DCDEDD;
-    // border-bottom-width: 0.1rem;
-    // border-bottom-style: solid;
+    /* border-bottom: 0.1rem solid #DCDEDD;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid; */
     border-bottom: 1px solid #E8E8E8; 
 } 
 

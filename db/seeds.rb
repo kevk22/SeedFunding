@@ -191,105 +191,105 @@ project32 = Project.create!(name: "Ubik", description: "By Philip K. Dick", body
     funding_expiration: Date.new(2025, 1, 1), funding_goal: 6000000, user_id: user1.id, category_id: category8.id) 
 
 
-    # art_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/basquiat.jpg")
-    # project1.photo.attach(io: art_pic0, filename: "basquiat.jpg")
+    art_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/basquiat.jpg")
+    project1.photo.attach(io: art_pic0, filename: "basquiat.jpg")
 
-    # art_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts1.jpeg")
-    # project9.photo.attach(io: art_pic1, filename: "Arts1.jpeg")
+    art_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts1.jpeg")
+    project9.photo.attach(io: art_pic1, filename: "Arts1.jpeg")
 
-    # art_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts2.jpeg")
-    # project10.photo.attach(io: art_pic2, filename: "Arts2.jpeg")
+    art_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts2.jpeg")
+    project10.photo.attach(io: art_pic2, filename: "Arts2.jpeg")
 
-    # art_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts3.jpeg")
-    # project11.photo.attach(io: art_pic3, filename: "Arts3.jpeg")
-
-
-    # comic_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration.jpeg")
-    # project2.photo.attach(io: comic_pic0, filename: "Comics+%26+Illustration.jpeg")
-
-    # comic_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration1.jpeg")
-    # project12.photo.attach(io: comic_pic1, filename: "Comics+%26+Illustration1.jpeg")
-
-    # comic_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration2.jpeg")
-    # project13.photo.attach(io: comic_pic2, filename: "Comics+%26+Illustration2.jpeg")
-
-    # comic_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration3.jpg")
-    # project14.photo.attach(io: comic_pic3, filename: "Comics+%26+Illustration3.jpg")
+    art_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Arts3.jpeg")
+    project11.photo.attach(io: art_pic3, filename: "Arts3.jpeg")
 
 
-    # tech_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech.jpeg")
-    # project3.photo.attach(io: tech_pic0, filename: "Design+%26+Tech.jpeg")
+    comic_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration.jpeg")
+    project2.photo.attach(io: comic_pic0, filename: "Comics+%26+Illustration.jpeg")
 
-    # tech_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech1.jpeg")
-    # project15.photo.attach(io: tech_pic1, filename: "Design+%26+Tech1.jpeg")
+    comic_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration1.jpeg")
+    project12.photo.attach(io: comic_pic1, filename: "Comics+%26+Illustration1.jpeg")
 
-    # tech_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech2.jpeg")
-    # project16.photo.attach(io: tech_pic2, filename: "Design+%26+Tech2.jpeg")
+    comic_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration2.jpeg")
+    project13.photo.attach(io: comic_pic2, filename: "Comics+%26+Illustration2.jpeg")
 
-    # tech_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech3.jeg.jpg")
-    # project17.photo.attach(io: tech_pic3, filename: "Design+%26+Tech3.jeg.jpg")
+    comic_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Comics+%26+Illustration3.jpg")
+    project14.photo.attach(io: comic_pic3, filename: "Comics+%26+Illustration3.jpg")
 
 
-    # film_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film.jpeg")
-    # project4.photo.attach(io: film_pic0, filename: "Film.jpeg")
+    tech_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech.jpeg")
+    project3.photo.attach(io: tech_pic0, filename: "Design+%26+Tech.jpeg")
+
+    tech_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech1.jpeg")
+    project15.photo.attach(io: tech_pic1, filename: "Design+%26+Tech1.jpeg")
+
+    tech_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech2.jpeg")
+    project16.photo.attach(io: tech_pic2, filename: "Design+%26+Tech2.jpeg")
+
+    tech_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Design+%26+Tech3.jeg.jpg")
+    project17.photo.attach(io: tech_pic3, filename: "Design+%26+Tech3.jeg.jpg")
+
+
+    film_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film.jpeg")
+    project4.photo.attach(io: film_pic0, filename: "Film.jpeg")
     
-    # film_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film1.jpeg")
-    # project18.photo.attach(io: film_pic1, filename: "Film1.jpeg")
+    film_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film1.jpeg")
+    project18.photo.attach(io: film_pic1, filename: "Film1.jpeg")
 
-    # film_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film2.jpeg")
-    # project19.photo.attach(io: film_pic2, filename: "Film2.jpeg")
+    film_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film2.jpeg")
+    project19.photo.attach(io: film_pic2, filename: "Film2.jpeg")
     
-    # film_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film3.jpeg")
-    # project20.photo.attach(io: film_pic3, filename: "Film3.jpeg")
+    film_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Film3.jpeg")
+    project20.photo.attach(io: film_pic3, filename: "Film3.jpeg")
 
 
-    # food_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft.jpeg")
-    # project5.photo.attach(io: food_pic0, filename: "Food+%26+Craft.jpeg")
+    food_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft.jpeg")
+    project5.photo.attach(io: food_pic0, filename: "Food+%26+Craft.jpeg")
 
-    # food_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft3.jpeg")
-    # project21.photo.attach(io: food_pic1, filename: "Food+%26+Craft3.jpeg")
+    food_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft3.jpeg")
+    project21.photo.attach(io: food_pic1, filename: "Food+%26+Craft3.jpeg")
 
-    # food_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft1.jpeg")
-    # project22.photo.attach(io: food_pic2, filename: "Food+%26+Craft1.jpeg")
+    food_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft1.jpeg")
+    project22.photo.attach(io: food_pic2, filename: "Food+%26+Craft1.jpeg")
 
-    # food_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft2.jpeg")
-    # project23.photo.attach(io: food_pic3, filename: "Food+%26+Craft2.jpeg")
-
-
-    # game_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games.jpg")
-    # project6.photo.attach(io: game_pic0, filename: "Games.jpg")
-
-    # game_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games1.jpeg")
-    # project24.photo.attach(io: game_pic1, filename: "Games1.jpeg")
-
-    # game_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games2.jpeg")
-    # project25.photo.attach(io: game_pic2, filename: "Games2.jpeg")
-
-    # game_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games3.jpeg")
-    # project26.photo.attach(io: game_pic3, filename: "Games3.jpeg")
+    food_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Food+%26+Craft2.jpeg")
+    project23.photo.attach(io: food_pic3, filename: "Food+%26+Craft2.jpeg")
 
 
-    # music_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music.jpeg")
-    # project7.photo.attach(io: music_pic0, filename: "Music.jpeg")
+    game_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games.jpg")
+    project6.photo.attach(io: game_pic0, filename: "Games.jpg")
 
-    # music_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music1.jpeg")
-    # project27.photo.attach(io: music_pic1, filename: "Music1.jpeg")
+    game_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games1.jpeg")
+    project24.photo.attach(io: game_pic1, filename: "Games1.jpeg")
 
-    # music_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music2.jpeg")
-    # project28.photo.attach(io: music_pic2, filename:"Music2.jpeg")
+    game_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games2.jpeg")
+    project25.photo.attach(io: game_pic2, filename: "Games2.jpeg")
+
+    game_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Games3.jpeg")
+    project26.photo.attach(io: game_pic3, filename: "Games3.jpeg")
+
+
+    music_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music.jpeg")
+    project7.photo.attach(io: music_pic0, filename: "Music.jpeg")
+
+    music_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music1.jpeg")
+    project27.photo.attach(io: music_pic1, filename: "Music1.jpeg")
+
+    music_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music2.jpeg")
+    project28.photo.attach(io: music_pic2, filename:"Music2.jpeg")
     
-    # music_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music3.jpeg")
-    # project29.photo.attach(io: music_pic3, filename:"Music3.jpeg")
+    music_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Music3.jpeg")
+    project29.photo.attach(io: music_pic3, filename:"Music3.jpeg")
 
 
-    # pub_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing.jpeg")
-    # project8.photo.attach(io: pub_pic0, filename: "Publishing.jpeg")
+    pub_pic0 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing.jpeg")
+    project8.photo.attach(io: pub_pic0, filename: "Publishing.jpeg")
 
-    # pub_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing1.jpeg")
-    # project30.photo.attach(io: pub_pic1, filename: "Publishing1.jpeg")
+    pub_pic1 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing1.jpeg")
+    project30.photo.attach(io: pub_pic1, filename: "Publishing1.jpeg")
 
-    # pub_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing2.jpeg")
-    # project31.photo.attach(io: pub_pic2, filename: "Publishing2.jpeg")
+    pub_pic2 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing2.jpeg")
+    project31.photo.attach(io: pub_pic2, filename: "Publishing2.jpeg")
 
-    # pub_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing3.jpeg")
-    # project32.photo.attach(io: pub_pic3, filename: "Publishing3.jpeg")
+    pub_pic3 = open("https://seedfunding-seeds.s3-us-west-1.amazonaws.com/Publishing3.jpeg")
+    project32.photo.attach(io: pub_pic3, filename: "Publishing3.jpeg")
