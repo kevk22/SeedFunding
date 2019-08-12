@@ -33,7 +33,6 @@ export default class HomeCategory extends React.Component {
             
         //Array of all project objects 
         let projArray = Object.values(this.props.projects);
-        console.log(projArray);
 
         let filteredProjs = [];
 

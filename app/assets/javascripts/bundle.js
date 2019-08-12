@@ -551,7 +551,6 @@ function (_React$Component) {
 
 
       var projArray = Object.values(this.props.projects);
-      console.log(projArray);
       var filteredProjs = [];
 
       for (var i = 0; i < projArray.length; i++) {
