@@ -21,6 +21,11 @@
     font-weight: 200;
 }
 
+.outer-container {
+    // display: flex;
+    // justify-content: space-around;
+}
+
 .category-button:hover {
     color: #034752;
     text-decoration: underline;
@@ -70,15 +75,19 @@
 }
 
 .featured-pic-container {
-    width: 720px;
+    // width: 720px;
+    width: 40%;
     height: 610px;
     border-right: #E8E8E8 1.25px solid;
     padding-left: 150px;
+    // border: 1px dotted blue; 
 }
  
 .featured-pic {
     height: 500px;
-    width: 650px; 
+    // width: 650px; 
+    width: 90%;
+    min-width: 400px;
     box-sizing: border-box;
 }
 
@@ -135,19 +144,19 @@
     position: absolute;
     height: 500px;
     width: 370px;
+    // margin-left: -00px;
+    // width: 80%;
     right: 158px;
     /* border: 1px solid blue; */
     border-bottom: 1.25px solid #E8E8E8;
-    
+    // border: 1px dotted blue; 
 }
 
 .rec-project-container {
-    /* border: 1px dotted blue; */
     height: 150px;
     padding-bottom: 20px;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: relative;
-    
 }
 
 .recommended-pic {

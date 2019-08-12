@@ -59,7 +59,7 @@ export default class HomeCategory extends React.Component {
                
                 <br />
 
-                <div className="outer-container">
+            <div className="outer-container">   
                 <div className="recommended-container">
                     <div className="rec-project-container"> 
                             <Link to={`/projects/${filteredProjs[1].id}`}>
