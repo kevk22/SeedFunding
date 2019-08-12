@@ -17,7 +17,7 @@ export default class Homepage extends React.Component {
         this.props.fetchCategoryIndex();
         this.props.fetchUsers();
         // this.props.fetchCategoryProject(curCategoryID);
-
+        
     }
 
     componentDidUpdate(prevProps) {
@@ -47,6 +47,11 @@ export default class Homepage extends React.Component {
                 > {category.name} </div>
             )
         });
+
+        if (this.state.curCategoryID === null) {
+            this.setState({ curCategoryID: category[0].id })
+        }
+
         
         return(          
         <div>
