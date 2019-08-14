@@ -1,6 +1,4 @@
 import React from 'react';
-// import DatePicker from "react-datepicker";
-
 
 
 export default class ProjectForm extends React.Component {
@@ -44,9 +42,6 @@ export default class ProjectForm extends React.Component {
     }
 
     handleFunding(event) {
-        // let { value, min, max } = event.target.value;
-        // value = Math.max(Number(min), Math.min(Number(max), Number(value)));
-
         this.setState({ funding: event.target.value });
     }
 
@@ -84,7 +79,7 @@ export default class ProjectForm extends React.Component {
         
         this.props.createProject(formData)
             .then((action) => {
-                return this.props.history.push(`/projects/${action.project.id}`);
+                this.props.history.push(`/projects/${action.project.id}`);
             });
 
     }

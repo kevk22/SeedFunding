@@ -1139,7 +1139,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import DatePicker from "react-datepicker";
+
 
 var ProjectForm =
 /*#__PURE__*/
@@ -1201,8 +1201,6 @@ function (_React$Component) {
   }, {
     key: "handleFunding",
     value: function handleFunding(event) {
-      // let { value, min, max } = event.target.value;
-      // value = Math.max(Number(min), Math.min(Number(max), Number(value)));
       this.setState({
         funding: event.target.value
       });
@@ -1249,7 +1247,7 @@ function (_React$Component) {
       formData.append('project[photo]', this.state.image);
       formData.append('project[user_id]', this.props.currentUser);
       this.props.createProject(formData).then(function (action) {
-        return _this2.props.history.push("/projects/".concat(action.project.id));
+        _this2.props.history.push("/projects/".concat(action.project.id));
       });
     }
   }, {
