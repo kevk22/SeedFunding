@@ -10,8 +10,13 @@ class Api::ProjectsController < ApplicationController
     end
 
     def create 
-        @project = Project.create!(project_params)
-        render :show
+        @project = Project.new(project_params)
+
+        if @project.save 
+            render :show 
+        else 
+            render json: @project.errors.as_json(full_messages: true), status: 422
+        end
     end
 
     def update 
@@ -27,7 +32,7 @@ class Api::ProjectsController < ApplicationController
     def project_params 
         params.require(:project).permit(
             :name, :description, :body, :funding_expiration, 
-            :image, :funding_goal, :category_id, :user_id
+            :photo, :funding_goal, :category_id, :user_id
         )
     end
 

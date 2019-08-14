@@ -22,5 +22,11 @@ export const createProject = projectForm => (
     })
 );
 
+export const deleteProject = id => {
+    $.ajax({
+        method: "DELETE",
+        url: `api/projects/${id}`
+    });
+};
 
 

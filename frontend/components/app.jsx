@@ -21,12 +21,10 @@ const App = () => (
     <div>
         <Modal />
         <div className="nav">
-            
             <Link to="/" className="header-link">
                 <img src="logo.png" className="logo" />
             </Link>
             <GreetingContainer />
-            
         </div>
 
         <Route path="/projects/:project_id" component={ProjectContainer} />

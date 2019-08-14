@@ -35,16 +35,83 @@
     text-align: center;
     font-weight: 400;
     font-size: 18px;
+    margin-top: 10px;
 }
 
 .textbox-desc {
-     margin-bottom: 1.0rem;
+    margin-bottom: 1.0rem;
+    margin-top: 1.0rem;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    width: 50vw;
+    height: 10vh;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.title-desc {
+    margin-bottom: 45px;
+    margin-top: 1.0rem;
     box-sizing: border-box;
     padding: 12px;
     font-size: 14px;
-    width: 40vw;
-    height: 10vh;
+    width: 350px;
+    height: 40px;
     resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.dropdown-cat {
+    height: 2.4rem;
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+    margin-top: 1.0rem;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
+    border-color: transparent;
+    border: 0.1rem solid #DCDEDD;
+    border-radius: 2px !important;
+    color: #656969;
+    font-size: 1.0rem;
+    line-height: 2.4rem;
+}
+
+.exp-date {
+    margin-bottom: 1.5rem;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.img-upload {
+    margin-bottom: 1.5rem;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.proj-submit {
+    width: 320px;
+    background-color: #009E74;
+    color: #FFFFFF !important;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.8rem;
+    font-size: .9rem;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;

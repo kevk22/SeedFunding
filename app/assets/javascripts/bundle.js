@@ -407,11 +407,14 @@ var Greeting = function Greeting(_ref) {
 
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      className: "login-signup"
+      className: "header-group"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
       className: "signin-header"
-    }, "Sign in"));
+    }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/projects/new",
+      className: "create-header"
+    }, "Create a project"));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -423,7 +426,10 @@ var Greeting = function Greeting(_ref) {
       onClick: function onClick() {
         return openModal('profile');
       }
-    }));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/projects/new",
+      className: "create-header"
+    }, "Create a project"));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();
@@ -1121,21 +1127,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
 
+ // import DatePicker from "react-datepicker";
 
 var ProjectForm =
 /*#__PURE__*/
 function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(ProjectForm, _React$Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(ProjectForm, _React$Component);
 
   function ProjectForm(props) {
     var _this;
@@ -1144,9 +1153,22 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProjectForm).call(this, props));
     _this.state = {
-      category: null,
-      description: null
+      title: "",
+      category: "Arts",
+      description: "",
+      funding: "",
+      body: "",
+      end_date: "",
+      image: null
     };
+    _this.handleTitle = _this.handleTitle.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleCategory = _this.handleCategory.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleDescription = _this.handleDescription.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleFunding = _this.handleFunding.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleDate = _this.handleDate.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleBody = _this.handleBody.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleImage = _this.handleImage.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
@@ -1156,53 +1178,156 @@ function (_React$Component) {
       this.props.fetchCategoryIndex();
     }
   }, {
-    key: "myFunction",
-    value: function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+    key: "handleTitle",
+    value: function handleTitle(event) {
+      this.setState({
+        title: event.target.value
+      });
+    }
+  }, {
+    key: "handleCategory",
+    value: function handleCategory(event) {
+      this.setState({
+        category: event.target.value
+      });
+    }
+  }, {
+    key: "handleDescription",
+    value: function handleDescription(event) {
+      this.setState({
+        description: event.target.value
+      });
+    }
+  }, {
+    key: "handleFunding",
+    value: function handleFunding(event) {
+      // let { value, min, max } = event.target.value;
+      // value = Math.max(Number(min), Math.min(Number(max), Number(value)));
+      this.setState({
+        funding: event.target.value
+      });
+    }
+  }, {
+    key: "handleDate",
+    value: function handleDate(event) {
+      this.setState({
+        end_date: event.target.value
+      });
+    }
+  }, {
+    key: "handleBody",
+    value: function handleBody(event) {
+      this.setState({
+        body: event.target.value
+      });
+    }
+  }, {
+    key: "handleImage",
+    value: function handleImage(event) {
+      this.setState({
+        image: event.target.files[0]
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      var _this2 = this;
+
+      event.preventDefault();
+      var formData = new FormData();
+      var catID;
+      var funding_goal = Number(Math.abs(this.state.funding));
+      this.props.categories.forEach(function (category) {
+        if (_this2.state.category === category.name) catID = category.id;
+      });
+      formData.append('project[name]', this.state.title);
+      formData.append('project[category_id]', catID);
+      formData.append('project[funding_expiration]', this.state.end_date);
+      formData.append('project[description]', this.state.description);
+      formData.append('project[funding_goal]', funding_goal);
+      formData.append('project[body]', this.state.body);
+      formData.append('project[photo]', this.state.image);
+      formData.append('project[user_id]', this.props.currentUser);
+      this.props.createProject(formData).then(function (action) {
+        return _this2.props.history.push("/projects/".concat(action.project.id));
+      });
     }
   }, {
     key: "render",
     value: function render() {
       if (this.props.categories.length === 0) return null;
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "project-form"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "create_form_text"
-      }, "Pick a project category to connect with a specific community. You can always update this later."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "dropdown"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "dropdown-content",
-        id: "myDropdown"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[0].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[1].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[2].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[3].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[4].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[5].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[6].name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "#"
-      }, this.props.categories[7].name))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Project Title"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
+        className: "title-desc",
+        maxLength: "40",
+        placeholder: "Title",
+        value: this.state.title,
+        onChange: this.handleTitle
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "create_form_text"
-      }, "Describe what you\u2019ll be creating."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
+      }, "Funding Goal"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        type: "number",
+        min: "1",
+        className: "title-desc",
+        value: this.state.funding,
+        onChange: this.handleFunding
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Pick a project category to connect with a specific community. You can always update this later."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("select", {
+        className: "dropdown-cat",
+        value: this.state.value,
+        onChange: this.handleCategory
+      }, this.props.categories.map(function (cat, i) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("option", {
+          key: i,
+          value: cat.name
+        }, cat.name);
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Expiration Date"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        className: "exp-date",
+        id: "date",
+        type: "date",
+        value: this.state.end_date || "",
+        onChange: this.handleDate,
+        min: "2020-02-22"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Describe what you\u2019ll be creating. This will be your subtitle."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
         className: "textbox-desc",
         maxLength: "135",
         rows: "3",
-        placeholder: "Please enter a 135 character description"
-      })));
+        placeholder: "Please enter a 135 character description",
+        value: this.state.description,
+        onChange: this.handleDescription
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Tell people why they should be excited about your project. Get specific but be clear and be brief."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
+        className: "textbox-desc",
+        maxLength: "1200",
+        rows: "8",
+        placeholder: "Describe what you're raising funds to do, why you care about it, how you plan to make it happen, and who you are.",
+        value: this.state.body,
+        onChange: this.handleBody
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "create_form_text"
+      }, "Add an image that clearly represents your project."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        className: "img-upload",
+        type: "file",
+        onChange: this.handleImage
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "proj-submit",
+        onClick: this.handleSubmit
+      }, "Create Project")));
     }
   }]);
 
   return ProjectForm;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 
 
@@ -1228,6 +1353,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
+    currentUser: state.session.id,
     categories: Object.values(state.entities.categories)
   };
 };
@@ -2162,7 +2288,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], preloadedState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"]));
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], preloadedState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"], redux_logger__WEBPACK_IMPORTED_MODULE_2___default.a));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
@@ -2199,7 +2325,7 @@ var fetchCategoryProjects = function fetchCategoryProjects(id) {
 /*!*******************************************!*\
   !*** ./frontend/util/project_api_util.js ***!
   \*******************************************/
-/*! exports provided: fetchProjects, fetchProject, createProject */
+/*! exports provided: fetchProjects, fetchProject, createProject, deleteProject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2207,6 +2333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProject", function() { return fetchProject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createProject", function() { return createProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteProject", function() { return deleteProject; });
 var fetchProjects = function fetchProjects() {
   return $.ajax({
     method: "GET",
@@ -2226,6 +2353,12 @@ var createProject = function createProject(projectForm) {
     data: projectForm,
     contentType: false,
     processData: false
+  });
+};
+var deleteProject = function deleteProject(id) {
+  $.ajax({
+    method: "DELETE",
+    url: "api/projects/".concat(id)
   });
 };
 

@@ -112,7 +112,14 @@ html {
 
 .signin-header {
     color: #282828;
-
+    width: 49px;
+    height: 42px;
+    padding-right: 2.4rem;
+    padding-bottom: 2.4rem;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    cursor: pointer;
 }
 
 .signin-header:hover {
@@ -251,5 +258,19 @@ html {
     position: absolute;
     top: 90px;
     left: 120px;
+}
+
+
+.create-header {
+    color: #282828;
+    /* float: left; */
+    /* padding-right: 84vw; */
+    position: absolute;
+    top: 22px;
+    left: 30px;
+}
+
+.create-header:hover {
+    color: #009E74;
 }
 

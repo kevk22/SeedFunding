@@ -7,6 +7,7 @@ import ProjectForm from './project_form';
 const mapStateToProps = (state, ownProps) => {
  
     return({
+        currentUser: state.session.id,
         categories: Object.values(state.entities.categories)
     });
 };
