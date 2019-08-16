@@ -28,4 +28,5 @@ ___
 
 * Frontend: React + Redux 
 
-...
+
+![](standardGif.gif)
